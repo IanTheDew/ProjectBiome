@@ -1,3 +1,3 @@
-public interface Rooms {
-    
+public interface Room {
+    String name;
 }
