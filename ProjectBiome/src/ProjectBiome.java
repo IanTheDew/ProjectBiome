@@ -7,6 +7,6 @@ public class ProjectBiome{
     }
     public static void main (String[] args){
         
-        System.out.println("Hello shalom!");
+        System.out.println("Hello shalom how r u!");
     }
 }
