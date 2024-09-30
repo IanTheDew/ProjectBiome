@@ -1,3 +1,7 @@
-public interface Room {
-    String name;
+public interface Rooms {
+
+    // Interface for room behavior
+    void enterRoom();
+    void exitRoom();
+    
 }
