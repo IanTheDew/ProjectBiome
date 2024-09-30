@@ -1,14 +1,8 @@
-
-//asuhd;
 public class ProjectBiome{
 
-    public void lobby(){
-        
-    }
     public static void main (String[] args){
-        
-        System.out.println("Hello shalom how r u!");
-        System.out.println("Good!");
-        
+        // Set up initial game state
+        App app = new App();
+        app.startGame();
     }
 }
