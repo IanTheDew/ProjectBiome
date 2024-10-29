@@ -1,16 +1,14 @@
+import java.util.ArrayList;
+
 public class Player {
 
     private String playerName;
-    boolean jungleKey;
-    boolean desertKey;
-    boolean tundraKey;
+    ArrayList<String> invintory;
 
 
     public Player(String playerName) {
         this.playerName = playerName;
-        jungleKey = false;
-        desertKey = false;
-        tundraKey = false;
+        invintory = new ArrayList<>();
     }
 
     public String getPlayerName() {
