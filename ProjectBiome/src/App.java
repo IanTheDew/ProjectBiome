@@ -1,17 +1,35 @@
 public class App {
-
-    boolean gameOver = false;
-    long gameTime;
+    
+    private boolean gameOver;
+    private long gameTime;
+    
+    public App() {
+        gameOver = false;
+    }
+    
     public void startGame() {
-        // Game loop and main game logic
-
         //get game start time
         gameTime = System.nanoTime();
 
         //main game loop
-        while (!gameOver) {
+        do {
+            System.out.println("╔══════════════════════════════════╗");
+            System.out.println("║          Welcome to              ║");
+            System.out.println("║         Project Biome!           ║");
+            System.out.println("╚══════════════════════════════════╝\n");
+            System.out.println("Hello traveler, what is your name?: ");
             
-        }
+            // create player object with inputted name
+            Scanner scanner = new Scanner(System.in);
+            String name = scanner.nextLine();
+            Player player = new Player(name);
+            
+            // moving on...
+
+            
+            
+
+        } while(!gameOver);
     }
 
     public void endGame() {
