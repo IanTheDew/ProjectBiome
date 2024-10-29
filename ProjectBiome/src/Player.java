@@ -4,6 +4,11 @@ public class Player {
     private Key[] keys;
     private int keyIndex;
 
+    boolean jungleKey = false;
+    boolean desertKey = false;
+    boolean tundraKey = false;
+
+
     public Player(String playerName) {
         this.playerName = playerName;
         keys = new Key[5]; // Example for holding keys
