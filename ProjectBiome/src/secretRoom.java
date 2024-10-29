@@ -1,5 +1,5 @@
 public abstract class secretRoom implements Rooms {
-    private String description = " see a vast tundra...";
+    private String description = " you fall into a hidden gold cache...";
 
     public void puzzle() {
         //puzzle game
