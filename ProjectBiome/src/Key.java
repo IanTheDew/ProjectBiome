@@ -13,4 +13,13 @@ public class Key {
     public Room getRoom() {
         return room;
     }
+
+    public boolean useKey(Room target) {
+        if (room == target && target.isLocked()) {
+            target.unlock();
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
