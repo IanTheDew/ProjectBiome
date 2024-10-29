@@ -1,18 +1,16 @@
 public class Player {
 
     private String playerName;
-    private Key[] keys;
-    private int keyIndex;
-
-    boolean jungleKey = false;
-    boolean desertKey = false;
-    boolean tundraKey = false;
+    boolean jungleKey;
+    boolean desertKey;
+    boolean tundraKey;
 
 
     public Player(String playerName) {
         this.playerName = playerName;
-        keys = new Key[5]; // Example for holding keys
-        keyIndex = 0;
+        jungleKey = false;
+        desertKey = false;
+        tundraKey = false;
     }
 
     public String getPlayerName() {
