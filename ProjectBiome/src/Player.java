@@ -2,10 +2,12 @@ public class Player {
 
     private String playerName;
     private Key[] keys;
+    private int keyIndex;
 
     public Player(String playerName) {
         this.playerName = playerName;
         keys = new Key[5]; // Example for holding keys
+        keyIndex = 0;
     }
 
     public String getPlayerName() {
@@ -13,10 +15,11 @@ public class Player {
     }
 
     public void collectKey(Key key) {
-        // Logic for collecting keys
+        keys[keyIndex] = key;
+        keyIndex++;
     }
 
-    public void useKey() {
-        // Logic for using keys
+    public boolean useKey(Key key, Room room) {
+        return key.getRoom() == room;
     }
 }
