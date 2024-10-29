@@ -18,8 +18,4 @@ public class Player {
         keys[keyIndex] = key;
         keyIndex++;
     }
-
-    public boolean useKey(Key key, Room room) {
-        return key.getRoom() == room;
-    }
 }
