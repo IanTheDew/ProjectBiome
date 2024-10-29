@@ -1,11 +1,5 @@
 public abstract class finalRoom implements Rooms {
-    private boolean isLocked;
-    private String description = " see a vast tundra...";
-
-    public Room(String description, Boolean isLocked) {
-        this.description = description;
-        this.isLocked = isLocked;
-    }
+    private String description = " a dragon emerges from the shadows...";
 
     public void puzzle() {
         //puzzle game
