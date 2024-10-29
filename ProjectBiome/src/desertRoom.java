@@ -1,11 +1,5 @@
-public abstract class deserRoom implements Rooms {
-    private boolean isLocked;
+public abstract class desertRoom implements Rooms {
     private String description = " see a never ending desert...";
-
-    public Room(String description, Boolean isLocked) {
-        this.description = description;
-        this.isLocked = isLocked;
-    }
 
     public void puzzle() {
         //puzzle game
