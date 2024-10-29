@@ -1,11 +1,5 @@
 public abstract class tundraRoom implements Rooms {
-    private boolean isLocked;
     private String description = " see a vast tundra...";
-
-    public Room(String description, Boolean isLocked) {
-        this.description = description;
-        this.isLocked = isLocked;
-    }
 
     public void puzzle() {
         //puzzle game
