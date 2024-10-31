@@ -21,7 +21,7 @@ public class desertRoom implements Rooms {
         } while (!validInput);
     }
 
-     private void puzzle(Scanner scanner) {
+     private static void puzzle(Scanner scanner) {
         //puzzle game
         System.out.println("You are in a puzzle, enter y if you wish to successfully complete the puzzle");
         if (scanner.nextLine().equals("y")) {
@@ -33,7 +33,7 @@ public class desertRoom implements Rooms {
 
     @Override
     private void exitRoom() {
-        // Room exiting logic
+        lobbyRoom.enterRoom();
     }
     
 }
