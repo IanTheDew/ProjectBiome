@@ -15,8 +15,7 @@ public class Player {
         return playerName;
     }
 
-    public void collectKey(Key key) {
-        keys[keyIndex] = key;
-        keyIndex++;
+    public void collectItem(String item) {
+        inventory.add(item);
     }
 }
