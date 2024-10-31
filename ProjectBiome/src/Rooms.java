@@ -3,6 +3,6 @@ public interface Rooms {
     // Interface for room behavior
     void enterRoom();
     void exitRoom();
-    void puzzle();
+    void roomActivity();
     void displayMenu();
 }
