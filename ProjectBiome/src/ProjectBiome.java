@@ -8,6 +8,7 @@ public class ProjectBiome{
         // create player object with inputted name
         Scanner scanner = new Scanner(System.in);
 
+        lobbyRoom.enterRoom();
         //This is main game loop
         do {
 
