@@ -1,9 +1,27 @@
 import java.util.scanner;
 
 public class desertRoom implements Rooms {
-    private String description = " see a never ending desert...";
+    
+    @Override
+    public void enterRoom(Scanner scanner) {
+        System.out.println("you see a never ending desert...");
+        do {
+            boolean validInput = true;
+            System.out.println("Would you like to leave this room (l) or continue to the puzzle (p)?");
+            String userInput = scanner.nextLine();
+            
+            if (userInput.equals("l")) {
+                exitroom();
+            } else if (userInput.equals("p")) [
+                puzzle();
+            } else {
+                System.out.println("Your input was not recognized, please try again");
+                validInput = false;
+            }
+        } while (!validInput);
+    }
 
-    public void puzzle(Scanner scanner) {
+     private void puzzle(Scanner scanner) {
         //puzzle game
         System.out.println("You are in a puzzle, enter y if you wish to successfully complete the puzzle");
         if (scanner.nextLine().equals("y")) {
@@ -14,12 +32,7 @@ public class desertRoom implements Rooms {
     }
 
     @Override
-    public void enterRoom() {
-        // Room entering logic
-    }
-
-    @Override
-    public void exitRoom() {
+    private void exitRoom() {
         // Room exiting logic
     }
     
