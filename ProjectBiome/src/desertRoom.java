@@ -34,7 +34,7 @@ public class desertRoom implements Rooms {
 
     @Override
     private void exitRoom() {
-        lobbyRoom.enterRoom();
+        lobbyRoom.enterRoom(scanner);
     }
     
 }
