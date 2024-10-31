@@ -1,7 +1,7 @@
 import java.util.scanner;
 
 public class secretRoom implements Rooms {
-    private String description = " you fall into a hidden gold cache...";
+    private String description = "you fall into a hidden gold cache...";
 
     public void puzzle(Scanner scanner) {
         //puzzle game
