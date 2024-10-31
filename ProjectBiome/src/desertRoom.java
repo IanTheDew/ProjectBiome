@@ -22,7 +22,7 @@ public class desertRoom implements Rooms {
     }
 
     @Override
-     private static void puzzle(Scanner scanner) {
+     private static void roomActivity(Scanner scanner) {
         //puzzle game
         System.out.println("You are in a puzzle, enter y if you wish to successfully complete the puzzle");
         if (scanner.nextLine().equals("y")) {
