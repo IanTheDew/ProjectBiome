@@ -5,7 +5,7 @@ public class secretRoom implements Rooms {
 
     public void puzzle(Scanner scanner) {
         //puzzle game
-        System.out.println("You are in a puzzle, enter y if you want to complete the puzzle");
+    System.out.println("You are in a puzzle, enter y if you wish to successfully complete the puzzle");
         if (scanner.nextLine().equals("y")) {
             return true;
         } else {
