@@ -3,7 +3,7 @@ import java.util.scanner;
 public class finalRoom implements Rooms {
     
     @Override
-    public void enterRoom(Scanner scanner) {
+    public static void enterRoom(Scanner scanner) {
         System.out.println(" a dragon emerges from the shadows...");
         do {
             boolean validInput = true;
@@ -25,9 +25,9 @@ public class finalRoom implements Rooms {
         //puzzle game
         System.out.println("You are in the final boss fight, would you like to win? (y)");
         if (scanner.nextLine().equals("y")) {
-            exitRoom();
-        } else {
             
+        } else {
+            exitRoom();
         }
     }
 
