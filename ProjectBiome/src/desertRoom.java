@@ -3,10 +3,10 @@ import java.util.scanner;
 public class desertRoom implements Rooms {
     private String description = " see a never ending desert...";
 
-    public void puzzle(Scanner in) {
+    public void puzzle(Scanner scanner) {
         //puzzle game
         System.out.println("You are in a puzzle, enter y if you want to complete the puzzle");
-        if (in.nextLine().equals("y")) {
+        if (scanner.nextLine().equals("y")) {
             return true;
         } else {
             return false;
