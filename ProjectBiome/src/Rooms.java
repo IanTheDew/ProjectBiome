@@ -4,4 +4,5 @@ public interface Rooms {
     void enterRoom();
     void exitRoom();
     void puzzle();
+    void displayMenu();
 }
