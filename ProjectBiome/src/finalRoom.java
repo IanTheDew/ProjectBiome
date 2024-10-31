@@ -1,26 +1,40 @@
 import java.util.scanner;
 
 public class finalRoom implements Rooms {
-    private String description = " a dragon emerges from the shadows...";
+    
+    @Override
+    public void enterRoom(Scanner scanner) {
+        System.out.println(" a dragon emerges from the shadows...");
+        do {
+            boolean validInput = true;
+            System.out.println("Would you like to continue to the boss fight (b)?");
+            String userInput = scanner.nextLine();
+        
+            if (userInput.equals("b")) [
+                roomActivity();
+            } else {
+                System.out.println("Your input was not recognized, please try again");
+                validInput = false;
+            }
+        
+        } while (!validInput);
+    }
 
-    public void puzzle(Scanner scanner) {
+    @Override
+    private static void roomActivity(Scanner scanner) {
         //puzzle game
-        System.out.println("You are in a puzzle, enter y if you wish to successfully complete the puzzle");
+        System.out.println("You are in the final boss fight, would you like to win? (y)");
         if (scanner.nextLine().equals("y")) {
-            return true;
+            exitRoom();
         } else {
-            return false;
+            
         }
     }
 
     @Override
-    public void enterRoom() {
-        // Room entering logic
-    }
-
-    @Override
-    public void exitRoom() {
-        // Room exiting logic
-    }
+    private void exitRoom(Scanner scanner) {
+        win();
+}
+        
     
 }
