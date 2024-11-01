@@ -25,7 +25,8 @@ public class finalRoom implements Rooms {
         //puzzle game
         System.out.println("You are in the final boss fight, would you like to win? (y)");
         if (scanner.nextLine().equals("y")) {
-            
+            System.out.println("Congrats! You have beaten Project Biome!");
+            endGame();
         } else {
             exitRoom();
         }
@@ -33,8 +34,8 @@ public class finalRoom implements Rooms {
 
     @Override
     private void exitRoom(Scanner scanner) {
-        win();
-}
+        lobbyRoom.enterRoom(scanner);
+    }
         
     
 }
