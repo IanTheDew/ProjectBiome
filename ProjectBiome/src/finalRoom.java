@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class finalRoom {
+public class finalRoom extends Rooms {
     
 	private static void roomActivity(Player player, Scanner scanner) {
         System.out.println("You are in the final boss fight, would you like to win? (y)");
