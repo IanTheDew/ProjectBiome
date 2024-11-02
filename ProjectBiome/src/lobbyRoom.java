@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class lobbyRoom {
+public class lobbyRoom extends Rooms  {
     public static void roomActivity(Player player, Scanner scanner) {
     	boolean validInput;
     	
