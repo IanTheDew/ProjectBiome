@@ -38,7 +38,7 @@ public class ProjectBiome{
 
     public void endGame() {
         // End game sequence
-        gameOver = false;
+        gameOver = true;
         
         //get total game time
         gameTime = System.nanoTime() - gameTime;
