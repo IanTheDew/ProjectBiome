@@ -1,26 +1,39 @@
-import java.util.scanner;
+import java.util.Scanner;
 
-public class lobbyRoom implements Rooms {
-    private String description = "you see a long hallway with three doors and a large gate requiring three keys...";
-
-    public void puzzle(Scanner scanner) {
-        //puzzle game
-        System.out.println("You are in a puzzle, enter y if you wish to successfully complete the puzzle");
-        if (scanner.nextLine().equals("y")) {
-            return true;
-        } else {
-            return false;
-        }
+public class lobbyRoom {
+    public static void roomActivity(Player player, Scanner scanner) {
+    	boolean validInput;
+    	
+		do {
+			validInput = true;
+	        System.out.println("Would you like to enter the blue door (b), green door (g), or yellow door (y) or appraoch the gate (a)?");
+	        String input = scanner.nextLine();
+	        
+	        if (input.equals("b")) {
+	            tundraRoom.enterRoom(player, scanner);
+	        } else if (input.equals("g")) {
+	            jungleRoom.enterRoom(player, scanner);
+	        } else if (input.equals("y")) {
+	        	desertRoom.enterRoom(player, scanner);
+	        } else if (input.equals("a")) {
+	        	if (player.hasAllKeys()) {
+	        		finalRoom.enterRoom(player, scanner);
+	        	} else {
+	        		System.out.println("You don't have the required keys to enter this area!!");
+	        		validInput = false;
+	        	}
+	        } else {
+	        	System.out.println("Your input was not recognized, please try again");
+	        	validInput = false;
+	        }
+		} while (!validInput);
+		
     }
 
-    @Override
-    public void enterRoom() {
+    public static void enterRoom (Player player, Scanner scanner) {
         // Room entering logic
-    }
-
-    @Override
-    public void exitRoom() {
-        // Room exiting logic
+    	System.out.println("you see a long hallway with three doors and a large gate requiring three keys...");
+    	roomActivity(player, scanner);
     }
     
 }
