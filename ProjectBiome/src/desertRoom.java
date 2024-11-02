@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class desertRoom {
+public class desertRoom extends Rooms {
 
      private static void roomActivity(Player player, Scanner scanner) {
         System.out.println("You are in a puzzle, will you successfully solve the puzzle (y)?");
