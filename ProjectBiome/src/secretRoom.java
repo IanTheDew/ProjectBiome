@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class secretRoom extends Rooms {
     
-    public void roomActivity(Player player, Scanner scanner) {
+    public static void roomActivity(Player player, Scanner scanner) {
         System.out.println("You are in a puzzle, will you successfully solve the puzzle (y)?");
         if (scanner.nextLine().equals("y")) {
             
@@ -11,7 +11,7 @@ public class secretRoom extends Rooms {
         }
     }
     
-    public void enterRoom(Player player, Scanner scanner) {
+    public static void enterRoom(Player player, Scanner scanner) {
     	System.out.println("you fall into a hidden gold cache...");
     	boolean validInput;
     	
@@ -32,7 +32,7 @@ public class secretRoom extends Rooms {
     }
 
    
-    public void exitRoom(Player player, Scanner scanner) {
+    public static void exitRoom(Player player, Scanner scanner) {
         lobbyRoom.enterRoom(player, scanner);
     }
     
