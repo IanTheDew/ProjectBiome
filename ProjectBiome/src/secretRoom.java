@@ -1,26 +1,39 @@
-import java.util.scanner;
+import java.util.Scanner;
 
-public class secretRoom implements Rooms {
-    private String description = "you fall into a hidden gold cache...";
-
-    public void puzzle(Scanner scanner) {
-        //puzzle game
-        System.out.println("You are in a puzzle, enter y if you wish to successfully complete the puzzle");
+public class secretRoom {
+    
+    public void roomActivity(Player player, Scanner scanner) {
+        System.out.println("You are in a puzzle, will you successfully solve the puzzle (y)?");
         if (scanner.nextLine().equals("y")) {
-            return true;
+            
         } else {
-            return false;
+            
         }
     }
     
-    @Override
-    public void enterRoom() {
-        // Room entering logic
+    public void enterRoom(Player player, Scanner scanner) {
+    	System.out.println("you fall into a hidden gold cache...");
+    	boolean validInput;
+    	
+        do {
+        	validInput = true;
+            System.out.println("Would you like to leave this room (l) or continue to the puzzle (p)?");
+            String userInput = scanner.nextLine();
+            
+            if (userInput.equals("l")) {
+                exitRoom(player, scanner);
+            } else if (userInput.equals("p")) {
+                roomActivity(player, scanner);
+            } else {
+                System.out.println("Your input was not recognized, please try again");
+                validInput = false;
+            }
+        } while (!validInput);
     }
 
-    @Override
-    public void exitRoom() {
-        // Room exiting logic
+   
+    public void exitRoom(Player player, Scanner scanner) {
+        lobbyRoom.enterRoom(player, scanner);
     }
     
 }
