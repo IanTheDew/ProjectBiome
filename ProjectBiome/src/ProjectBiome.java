@@ -1,27 +1,17 @@
 import java.util.Scanner;
 
 public class ProjectBiome{
+	
 
     public static void main (String[] args){
-        // Set up initial game state
-        private boolean gameOver = false;
-        private long gameTime;
-
-        // create player object with inputted name
-        Scanner scanner = new Scanner(System.in);
-
-        lobbyRoom.enterRoom();
-        //This is main game loop
-        do {
-
-            //Switch case for user options/inputs
-            
-        } while (!gameOver);
-        
+    	long gameTime = startGame();
+    	endGame(gameTime);
     }    
-    public void startGame() {
-        //get game start time
-        gameTime = System.nanoTime();
+    
+    public static long startGame() {
+    	// Set up initial game state
+        long gameTime = System.nanoTime();
+        Scanner scanner = new Scanner(System.in);
 
         //print main display
         System.out.println("╔══════════════════════════════════╗");
@@ -34,22 +24,13 @@ public class ProjectBiome{
         String name = scanner.nextLine();
         Player player = new Player(name);
         
+        lobbyRoom.enterRoom(player, scanner);
+        return gameTime;
     }
 
-    public void endGame() {
-        // End game sequence
-        gameOver = true;
-        
+    public static void endGame(long gameTime) {
         //get total game time
         gameTime = System.nanoTime() - gameTime;
         System.out.println("Thank you for playing. \nTotal game time: " + gameTime);
-    }
-
-    public void displayMenu() {
-        // Display main menu options
-    }
-
-    public void chooseBiome() {
-        // Biome selection logic
     }
 }
