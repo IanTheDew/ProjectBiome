@@ -18,4 +18,8 @@ public class Player {
     public void collectItem(String item) {
         inventory.add(item);
     }
+    
+    public boolean hasAllKeys() {
+    	return (inventory.contains("Desert Key") && inventory.contains("Tundra Key") && inventory.contains("Jungle Key"));
+    }
 }
