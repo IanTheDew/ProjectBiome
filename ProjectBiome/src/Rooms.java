@@ -12,6 +12,6 @@ import java.util.Scanner;
 
 public abstract class Rooms {
     public static void enterRoom(Player player, Scanner scanner) {}
-    public static void exitRoom(Player player, Scanner scanner) {}
-    public static void roomActivity(Player player, Scanner scanner) {}
+    private static void exitRoom(Player player, Scanner scanner) {}
+    private static void roomActivity(Player player, Scanner scanner) {}
 }
