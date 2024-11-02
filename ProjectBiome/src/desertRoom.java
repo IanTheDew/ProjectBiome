@@ -1,40 +1,55 @@
-import java.util.scanner;
+import java.util.Scanner;
 
-public class desertRoom implements Rooms {
-    
-    @Override
-    public void enterRoom(Scanner scanner) {
-        System.out.println("you see a never ending desert...");
-        do {
-            boolean validInput = true;
-            System.out.println("Would you like to leave this room (l) or continue to the puzzle (p)?");
-            String userInput = scanner.nextLine();
-            
-            if (userInput.equals("l")) {
-                exitroom();
-            } else if (userInput.equals("p")) [
-                puzzle();
-            } else {
-                System.out.println("Your input was not recognized, please try again");
-                validInput = false;
-            }
-        } while (!validInput);
-    }
+public class desertRoom {
 
-    @Override
-     private static void roomActivity(Scanner scanner) {
-        //puzzle game
-        System.out.println("You are in a puzzle, enter y if you wish to successfully complete the puzzle");
+     private static void roomActivity(Player player, Scanner scanner) {
+        System.out.println("You are in a puzzle, will you successfully solve the puzzle (y)?");
         if (scanner.nextLine().equals("y")) {
-            return true;
+        	System.out.println("Congrats! You have solved the puzzle and obtained the Desert Key!");
+        	player.collectItem("Desert Key");
+        	exitRoom(player, scanner);
+        	
         } else {
-            return false;
+        	
+        	boolean validInput;
+        	
+        	do {
+        		validInput = true;
+	            System.out.println("You have failed the puzzle! Would you like to retry (r) or exit back to the lobby (n)?");
+	            String input = scanner.nextLine();
+	            if (input.equals("r")) {
+	            	roomActivity(player, scanner);
+	            } else if (input.equals("n")) {
+	            	exitRoom(player, scanner);
+	            } else {
+	            	System.out.println("Your input was not recognized, please try again");
+	            	validInput = false;
+	            }
+        	} while (!validInput);
         }
     }
+     
+     public static void enterRoom(Player player, Scanner scanner) {
+         System.out.println("you see a never ending desert...");
+         boolean validInput;
+         do {
+         	validInput = true;
+             System.out.println("Would you like to leave this room (l) or continue to the puzzle (p)?");
+             String userInput = scanner.nextLine();
+             
+             if (userInput.equals("l")) {
+                 exitRoom(player, scanner);
+             } else if (userInput.equals("p")) {
+                 roomActivity(player, scanner);
+             } else {
+                 System.out.println("Your input was not recognized, please try again");
+                 validInput = false;
+             }
+         } while (!validInput);
+     }
 
-    @Override
-    private void exitRoom() {
-        lobbyRoom.enterRoom(scanner);
+    private static void exitRoom(Player player, Scanner scanner) {
+        lobbyRoom.enterRoom(player, scanner);
     }
     
 }
