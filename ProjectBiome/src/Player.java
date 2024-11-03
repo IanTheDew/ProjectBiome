@@ -17,14 +17,25 @@ public class Player {
         inventory = new ArrayList<>();
     }
 
+    /**
+    Description: A getter that gets the player's name (this is user inputted)
+    **/
     public String getPlayerName() {
         return playerName;
     }
 
+    
+    /**
+    @param item that is added to the inventory array list
+    Description: adds a key and/or weapon/other item to the inventory array list
+    **/
     public void collectItem(String item) {
         inventory.add(item);
     }
     
+    /**
+    Description: This method determines if the final room can be entered or not by returning true if all keys are in the array list inventory
+    **/
     public boolean hasAllKeys() {
     	return (inventory.contains("Desert Key") && inventory.contains("Tundra Key") && inventory.contains("Jungle Key"));
     }
