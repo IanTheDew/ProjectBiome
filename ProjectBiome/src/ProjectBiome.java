@@ -7,7 +7,9 @@ public class ProjectBiome{
     	long gameTime = startGame();
     	endGame(gameTime);
     }    
-    
+    /**
+    Description: starts the game and collects the time it takes the player to finish, entering the lobby room, and prints the welcome prompt
+     **/
     public static long startGame() {
     	// Set up initial game state
         long gameTime = System.nanoTime();
@@ -27,7 +29,9 @@ public class ProjectBiome{
         lobbyRoom.enterRoom(player, scanner);
         return gameTime;
     }
-
+    /**
+    Description: ends the game, prints the total playtime, and prompts the end message
+     **/
     public static void endGame(long gameTime) {
         //get total game time
         gameTime = System.nanoTime() - gameTime;
