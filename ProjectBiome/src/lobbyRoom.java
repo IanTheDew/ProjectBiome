@@ -1,6 +1,12 @@
 import java.util.Scanner;
 
 public class lobbyRoom extends Rooms  {
+
+	/**
+      	@param player navigating the room
+        @param scanner to take input
+	Description: Rooms and puzzles are navigated
+	**/
     public static void roomActivity(Player player, Scanner scanner) {
     	boolean validInput;
     	
@@ -29,7 +35,11 @@ public class lobbyRoom extends Rooms  {
 		} while (!validInput);
 		
     }
-
+/**
+      	@param player navigating the lobby room
+        @param scanner to take input
+	Description: Prompts for user input when entering the lobby room
+	**/
     public static void enterRoom (Player player, Scanner scanner) {
         // Room entering logic
     	System.out.println("you see a long hallway with three doors and a large gate requiring three keys...");
