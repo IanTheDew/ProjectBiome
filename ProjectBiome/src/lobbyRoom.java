@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class lobbyRoom extends Rooms  {
 
 	/**
-      	@param player navigating the room
+      	@param player navigating the lobby room
         @param scanner to take input
 	Description: Rooms and puzzles are navigated
 	**/
