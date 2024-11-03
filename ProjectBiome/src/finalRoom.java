@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class finalRoom extends Rooms {
 
 	/**
-      	@param player navigating the room
+      	@param player navigating the final room
         @param scanner to take input
 	Description: Room activity and puzzles are navigated
 	**/
@@ -17,7 +17,7 @@ public class finalRoom extends Rooms {
         }
     }
 /**
-      	@param player navigating the room
+      	@param player navigating the final room
         @param scanner to take input
 	Description: Prompts for user input when entering the final room
 	**/	
@@ -40,7 +40,7 @@ public class finalRoom extends Rooms {
     }
 
 	/**
-      	@param player navigating the room
+      	@param player navigating the final room
         @param scanner to take input
 	Description: Prompts for user input when exiting the final room
 	**/
