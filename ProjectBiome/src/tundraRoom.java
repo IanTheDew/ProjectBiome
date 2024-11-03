@@ -2,6 +2,11 @@ import java.util.Scanner;
 
 public class tundraRoom extends Rooms {
 	
+	/**
+      	@param player navigating the tundra room
+        @param scanner to take input
+	Description: Rooms and puzzles are navigated
+	**/
     public static void roomActivity(Player player, Scanner scanner) {
     	System.out.println("You are in a puzzle, will you successfully solve the puzzle (y)?");
         if (scanner.nextLine().equals("y")) {
@@ -29,6 +34,11 @@ public class tundraRoom extends Rooms {
         }
     }
 
+	/**
+      	@param player navigating the tundra room
+        @param scanner to take input
+	Description: Prompts for user input when entering the tundra room
+	**/
     public static void enterRoom(Player player, Scanner scanner) {
     	System.out.println(" see a vast tundra...");
     	boolean validInput;
@@ -48,6 +58,11 @@ public class tundraRoom extends Rooms {
         } while (!validInput);
     }
 
+	/**
+      	@param player navigating the tundra room
+        @param scanner to take input
+	Description: Prompts for user input when exiting the tundra room
+	**/
     public static void exitRoom(Player player, Scanner scanner) {
     	lobbyRoom.enterRoom(player, scanner);
     }
