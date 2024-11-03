@@ -4,7 +4,7 @@ public class jungleRoom extends Rooms {
 /**
       	@param player navigating the room
         @param scanner to take input
-	Description: Prompts for user input when entering the room
+	Description: Room and puzzles are navigated
 	**/
     public static void roomActivity(Player player, Scanner scanner) {
     	System.out.println("You are in a puzzle, will you successfully solve the puzzle (y)?");
@@ -32,7 +32,11 @@ public class jungleRoom extends Rooms {
         	} while (!validInput);
         }
     }
-    
+    /**
+      	@param player navigating the jungle room
+        @param scanner to take input
+	Description: Prompts for user input when entering the jungle room
+	**/
     public static void enterRoom(Player player, Scanner scanner) {
         System.out.println(" see an expansive jungle...");
         boolean validInput;
@@ -53,7 +57,11 @@ public class jungleRoom extends Rooms {
         
     }
 
-
+/**
+      	@param player navigating the jungle room
+        @param scanner to take input
+	Description: Prompts for user input when exiting the jungle room
+	**/
     public static void exitRoom(Player player, Scanner scanner) {
         lobbyRoom.enterRoom(player, scanner);
     }
