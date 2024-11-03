@@ -1,7 +1,12 @@
 import java.util.Scanner;
 
 public class finalRoom extends Rooms {
-    
+
+	/**
+      	@param player navigating the room
+        @param scanner to take input
+	Description: Room activity and puzzles are navigated
+	**/
 	private static void roomActivity(Player player, Scanner scanner) {
         System.out.println("You are in the final boss fight, would you like to win? (y)");
         if (scanner.nextLine().equals("y")) {
@@ -11,7 +16,11 @@ public class finalRoom extends Rooms {
             exitRoom(player, scanner);
         }
     }
-	
+/**
+      	@param player navigating the room
+        @param scanner to take input
+	Description: Prompts for user input when entering the final room
+	**/	
     public static void enterRoom(Player player, Scanner scanner) {
         System.out.println(" a dragon emerges from the shadows...");
         boolean validInput;
@@ -30,6 +39,11 @@ public class finalRoom extends Rooms {
         } while (!validInput);
     }
 
+	/**
+      	@param player navigating the room
+        @param scanner to take input
+	Description: Prompts for user input when exiting the final room
+	**/
     private static void exitRoom(Player player, Scanner scanner) {
         lobbyRoom.enterRoom(player, scanner);
     }
