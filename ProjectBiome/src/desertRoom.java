@@ -5,7 +5,7 @@ public class desertRoom extends Rooms {
      	/**
       	@param player navigating the desert room
         @param scanner to take input
-	Description: Prompts for user input when entering the desert room
+	Description: Room and puzzles are navigated
 	**/
 	private static void roomActivity(Player player, Scanner scanner) {
         System.out.println("You are in a puzzle, will you successfully solve the puzzle (y)?");
