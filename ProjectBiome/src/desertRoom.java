@@ -2,7 +2,11 @@ import java.util.Scanner;
 
 public class desertRoom extends Rooms {
 
-     private static void roomActivity(Player player, Scanner scanner) {
+     	/**
+      	@param player navigating the room
+        @param scanner to take input
+	**/
+	private static void roomActivity(Player player, Scanner scanner) {
         System.out.println("You are in a puzzle, will you successfully solve the puzzle (y)?");
         if (scanner.nextLine().equals("y")) {
         	System.out.println("Congrats! You have solved the puzzle and obtained the Desert Key!");
@@ -28,7 +32,11 @@ public class desertRoom extends Rooms {
         	} while (!validInput);
         }
     }
-     
+     /**
+      	@param player navigating the room
+        @param scanner to take input
+	Description: Prompts for user input when entering the room
+	**/
      public static void enterRoom(Player player, Scanner scanner) {
          System.out.println("you see a never ending desert...");
          boolean validInput;
