@@ -1,7 +1,11 @@
 import java.util.Scanner;
 
 public class jungleRoom extends Rooms {
-
+/**
+      	@param player navigating the room
+        @param scanner to take input
+	Description: Prompts for user input when entering the room
+	**/
     public static void roomActivity(Player player, Scanner scanner) {
     	System.out.println("You are in a puzzle, will you successfully solve the puzzle (y)?");
         if (scanner.nextLine().equals("y")) {
