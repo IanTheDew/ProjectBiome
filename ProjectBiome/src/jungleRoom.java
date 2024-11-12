@@ -21,9 +21,9 @@ public class jungleRoom extends Rooms {
         		validInput = true;
 	            System.out.println("You have failed the puzzle! Would you like to retry (r) or exit back to the lobby (n)?");
 	            String input = scanner.nextLine();
-	            if (input.equals("r")) {
+	            if (input.equalsIgnoreCase("r")) {
 	            	roomActivity(player, scanner);
-	            } else if (input.equals("n")) {
+	            } else if (input.equalsIgnoreCase("n")) {
 	            	exitRoom(player, scanner);
 	            } else {
 	            	System.out.println("Your input was not recognized, please try again");
@@ -45,10 +45,10 @@ public class jungleRoom extends Rooms {
             System.out.println("Would you like to leave this room (l) or continue to the puzzle (p)?");
             String userInput = scanner.nextLine();
             
-            if (userInput.equals("l")) {
+            if (userInput.equalsIgnoreCase("l")) {
                 exitRoom(player, scanner);
             } else if (userInput.equals("p")) {
-                roomActivity(player, scanner);
+                roomActivityIgnoreCase(player, scanner);
             } else {
                 System.out.println("Your input was not recognized, please try again");
                 validInput = false;
