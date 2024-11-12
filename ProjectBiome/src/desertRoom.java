@@ -9,7 +9,7 @@ public class desertRoom extends Rooms {
 	**/
 	private static void roomActivity(Player player, Scanner scanner) {
         System.out.println("You are in a puzzle, will you successfully solve the puzzle (y)?");
-        if (scanner.nextLine().equals("y")) {
+        if (scanner.nextLine().equalsIgnoreCase("y")) {
         	System.out.println("Congrats! You have solved the puzzle and obtained the Desert Key!");
         	player.collectItem("Desert Key");
         	exitRoom(player, scanner);
@@ -22,7 +22,7 @@ public class desertRoom extends Rooms {
         		validInput = true;
 	            System.out.println("You have failed the puzzle! Would you like to retry (r) or exit back to the lobby (n)?");
 	            String input = scanner.nextLine();
-	            if (input.equals("r")) {
+	            if (input.equalsIgnoreCase("r")) {
 	            	roomActivity(player, scanner);
 	            } else if (input.equals("n")) {
 	            	exitRoom(player, scanner);
@@ -46,9 +46,9 @@ public class desertRoom extends Rooms {
              System.out.println("Would you like to leave this room (l) or continue to the puzzle (p)?");
              String userInput = scanner.nextLine();
              
-             if (userInput.equals("l")) {
+             if (userInput.equalsIgnoreCase("l")) {
                  exitRoom(player, scanner);
-             } else if (userInput.equals("p")) {
+             } else if (userInput.equalsIgnoreCase("p")) {
                  roomActivity(player, scanner);
              } else {
                  System.out.println("Your input was not recognized, please try again");
