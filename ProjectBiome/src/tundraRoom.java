@@ -18,7 +18,7 @@ public class tundraRoom extends Rooms {
         	boolean validInput;
         	
         	do {
-        		validInput = true;
+        	    validInput = true;
 	            System.out.println("You have failed the puzzle! Would you like to retry (r) or exit back to the lobby (n)?");
 	            String input = scanner.nextLine();
 	            if (input.equalsIgnoreCase("r")) {
