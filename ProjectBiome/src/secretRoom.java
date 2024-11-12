@@ -9,7 +9,7 @@ public class secretRoom extends Rooms {
 	**/
     public static void roomActivity(Player player, Scanner scanner) {
         System.out.println("You are in a puzzle, will you successfully solve the puzzle (y)?");
-        if (scanner.nextLine().equals("y")) {
+        if (scanner.nextLine().equalsIgnoreCase("y")) {
             
         } else {
             
@@ -30,9 +30,9 @@ public class secretRoom extends Rooms {
             System.out.println("Would you like to leave this room (l) or continue to the puzzle (p)?");
             String userInput = scanner.nextLine();
             
-            if (userInput.equals("l")) {
+            if (userInput.equalsIgnoreCase("l")) {
                 exitRoom(player, scanner);
-            } else if (userInput.equals("p")) {
+            } else if (userInput.equalsIgnoreCase("p")) {
                 roomActivity(player, scanner);
             } else {
                 System.out.println("Your input was not recognized, please try again");
