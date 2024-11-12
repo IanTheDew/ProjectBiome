@@ -15,13 +15,13 @@ public class lobbyRoom extends Rooms  {
 	        System.out.println("Would you like to enter the blue door (b), green door (g), or yellow door (y) or appraoch the gate (a)?");
 	        String input = scanner.nextLine();
 	        
-	        if (input.equals("b")) {
+	        if (input.equalsIgnoreCase("b")) {
 	            tundraRoom.enterRoom(player, scanner);
-	        } else if (input.equals("g")) {
+	        } else if (input.equalsIgnoreCase("g")) {
 	            jungleRoom.enterRoom(player, scanner);
 	        } else if (input.equals("y")) {
 	        	desertRoom.enterRoom(player, scanner);
-	        } else if (input.equals("a")) {
+	        } else if (input.equalsIgnoreCase("a")) {
 	        	if (player.hasAllKeys()) {
 	        		finalRoom.enterRoom(player, scanner);
 	        	} else {
