@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class secretRoom extends Rooms {
+public class SecretRoom extends Rooms {
     
     /**
       	@param player navigating the secret room
