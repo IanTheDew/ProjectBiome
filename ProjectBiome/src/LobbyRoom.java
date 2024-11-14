@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class lobbyRoom extends Rooms  {
+public class LobbyRoom extends Rooms  {
 
 	/**
       	@param player navigating the lobby room
