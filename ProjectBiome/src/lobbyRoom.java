@@ -7,7 +7,7 @@ public class lobbyRoom extends Rooms  {
         @param scanner to take input
 	Description: Rooms and puzzles are navigated
 	**/
-    public static void roomActivity(Player player, Scanner scanner) {
+    public static void RoomActivity(Player player, Scanner scanner) {
     	boolean validInput;
     	
 		do {
