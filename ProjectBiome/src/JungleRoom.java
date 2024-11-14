@@ -34,11 +34,11 @@ public class JungleRoom extends Rooms
 				}
 			}
 			puzzleSolved = true;
-			
 		   }
 		
-        	System.out.println("Congrats! You have solved the puzzle and obtained the Jungle Key!");
+        	System.out.print("The enemy is down. There is a key around its neck. You take it.");
         	player.collectItem("Jungle Key");
+		System.out.print("The Jungle Key is in your possession and you return to the lobby."
         	exitRoom(player, scanner);
         	
         } else {
@@ -47,7 +47,7 @@ public class JungleRoom extends Rooms
         	
         	do {
         		validInput = true;
-	            System.out.println("You have failed the puzzle! Would you like to retry (r) or exit back to the lobby (n)?");
+	            System.out.println("Would you like to retry (r) or exit back to the lobby (n)?");
 	            String input = scanner.nextLine();
 	            if (input.equalsIgnoreCase("r")) {
 	            	roomActivity(player, scanner);
