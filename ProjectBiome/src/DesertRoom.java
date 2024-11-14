@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class desertRoom extends Rooms {
+public class DesertRoom extends Rooms {
 
      	/**
       	@param player navigating the desert room
