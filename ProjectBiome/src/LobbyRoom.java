@@ -35,7 +35,7 @@ public class LobbyRoom extends Rooms  {
 		} while (!validInput);
 		
     }
-/**
+	/**
       	@param player navigating the lobby room
         @param scanner to take input
 	Description: Prompts for user input when entering the lobby room
