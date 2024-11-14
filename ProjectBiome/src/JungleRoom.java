@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class JungleRoom extends Rooms {
 /**
@@ -7,8 +8,18 @@ public class JungleRoom extends Rooms {
 	Description: Room and puzzles are navigated
 	**/
     public static void roomActivity(Player player, Scanner scanner) {
-    	System.out.println("You are in a puzzle, will you successfully solve the puzzle (y)?");
-        if (scanner.nextLine().equals("y")) {
+    	System.out.println("You are in a puzzle, will you attempt to solve the puzzle (y)?");
+        if (scanner.nextLine().equals("y")) 
+	{
+		System.out.println("There are enemies in front of you. Attack?");
+		if(scanner.nextLine().equalsIgnoreCase("y")
+		   {
+			int min = 1;
+			int max = 3;	
+			Random rand = new Random();
+			int rand_roll = rand.nextInt(max - min + 1) + min;
+		   }
+		
         	System.out.println("Congrats! You have solved the puzzle and obtained the Jungle Key!");
         	player.collectItem("Jungle Key");
         	exitRoom(player, scanner);
