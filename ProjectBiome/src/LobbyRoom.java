@@ -12,26 +12,26 @@ public class LobbyRoom extends Rooms  {
     	
 		do {
 			validInput = true;
-	        System.out.println("Would you like to enter the blue door (b), green door (g), or yellow door (y) or appraoch the gate (a)?");
-	        String input = scanner.nextLine();
+	        	System.out.println("Would you like to enter the blue door (b), green door (g), or yellow door (y) or appraoch the gate (a)?");
+	        	String input = scanner.nextLine();
 	        
-	        if (input.equalsIgnoreCase("b")) {
-	            tundraRoom.enterRoom(player, scanner);
-	        } else if (input.equalsIgnoreCase("g")) {
-	            jungleRoom.enterRoom(player, scanner);
-	        } else if (input.equals("y")) {
-	        	desertRoom.enterRoom(player, scanner);
-	        } else if (input.equalsIgnoreCase("a")) {
-	        	if (player.hasAllKeys()) {
-	        		finalRoom.enterRoom(player, scanner);
-	        	} else {
-	        		System.out.println("You don't have the required keys to enter this area!!");
-	        		validInput = false;
-	        	}
-	        } else {
-	        	System.out.println("Your input was not recognized, please try again");
-	        	validInput = false;
-	        }
+		        if (input.equalsIgnoreCase("b")) {
+		            tundraRoom.enterRoom(player, scanner);
+		        } else if (input.equalsIgnoreCase("g")) {
+		            jungleRoom.enterRoom(player, scanner);
+		        } else if (input.equals("y")) {
+		        	desertRoom.enterRoom(player, scanner);
+		        } else if (input.equalsIgnoreCase("a")) {
+		        	if (player.hasAllKeys()) {
+		        		finalRoom.enterRoom(player, scanner);
+		        	} else {
+		        		System.out.println("You don't have the required keys to enter this area!!");
+		        		validInput = false;
+		        	}
+		        } else {
+		        	System.out.println("Your input was not recognized, please try again");
+		        	validInput = false;
+		        }
 		} while (!validInput);
 		
     }
