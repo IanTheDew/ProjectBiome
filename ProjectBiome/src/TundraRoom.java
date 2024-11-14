@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class tundraRoom extends Rooms {
+public class TundraRoom extends Rooms {
 	
 	/**
       	@param player navigating the tundra room
