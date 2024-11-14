@@ -1,23 +1,40 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class JungleRoom extends Rooms {
-/**
+public class JungleRoom extends Rooms 
+{
+	private static boolean puzzleSolved = false;
+	Random rand = new Random();
+	
+	/**
       	@param player navigating the room
         @param scanner to take input
 	Description: Room and puzzles are navigated
 	**/
-    public static void roomActivity(Player player, Scanner scanner) {
+    public static void roomActivity(Player player, Scanner scanner) 
+	{
     	System.out.println("You are in a puzzle, will you attempt to solve the puzzle (y)?");
         if (scanner.nextLine().equals("y")) 
 	{
 		System.out.println("There are enemies in front of you. Attack?");
 		if(scanner.nextLine().equalsIgnoreCase("y")
 		   {
-			int min = 1;
-			int max = 3;	
-			Random rand = new Random();
-			int rand_roll = rand.nextInt(max - min + 1) + min;
+			int endCond = 0; // once this reaches 3, the puzzle is complete
+			int rand_roll = rand.nextInt(3) + 1
+			while(endCond != 3)
+			{
+				if(rand_roll.equals(1) || rand_roll.equals(3))
+				{
+					System.out.print("You missed. How unfortunate.")
+				}
+				if(rand_roll.equals(2))
+				{
+					endCond++;
+					System.out.print("Hit! Good going, " + player.name + ". ");
+				}
+			}
+			puzzleSolved = true;
+			
 		   }
 		
         	System.out.println("Congrats! You have solved the puzzle and obtained the Jungle Key!");
