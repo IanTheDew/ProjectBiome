@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class jungleRoom extends Rooms {
+public class JungleRoom extends Rooms {
 /**
       	@param player navigating the room
         @param scanner to take input
