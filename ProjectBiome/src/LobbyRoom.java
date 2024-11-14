@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class LobbyRoom extends Rooms  {
 
 	/**
-      	@param player navigating the lobby room
-        @param scanner to take input
+	@param player navigating the lobby room
+	@param scanner to take input
 	Description: Rooms and puzzles are navigated
 	**/
     public static void RoomActivity(Player player, Scanner scanner) {
