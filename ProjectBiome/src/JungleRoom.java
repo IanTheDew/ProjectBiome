@@ -20,20 +20,21 @@ public class JungleRoom extends Rooms
 		if (scanner.nextLine().equalsIgnoreCase("y"))
 		   {
 			int endCond = 0; // once this reaches 3, the puzzle is complete
+			Random rand = new Random();
 			int rand_roll = rand.nextInt(3) + 1;
 			while(endCond != 3)
 			{
-				if(rand_roll.equals(1) || rand_roll.equals(3))
+				if(rand_roll == 1 || rand_roll == 3)
 				{
-					System.out.print("You missed. How unfortunate.")
+					System.out.print("You missed. How unfortunate.");
 				}
-				if(rand_roll.equals(2))
+				if(rand_roll == 2)
 				{
 					endCond++;
 					System.out.print("Hit! Good going, " + player.getPlayerName() + ". ");
+					puzzleSolved = true;
 				}
 			}
-			puzzleSolved = true;
 		   }
 		
         	System.out.print("The enemy is down. There is a key around its neck. You take it.");
