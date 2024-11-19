@@ -35,8 +35,27 @@ public class TundraRoom extends Rooms {
 
     public static void roomActivityPart2(Player player, Scanner scanner) {
 	System.out.println("The question reads \"What is the shortest day of the year called?\"");
-	System.out.println("The arrow pointing right has the answer \"Winter Equinox\" above it and the arrow pointing left has the answer \"above it.");
+	System.out.println("The arrow pointing right has the answer \"Winter Equinox\" above it and the arrow pointing left has the answer \"Winter Solstice\" above it.");
 	System.out.println("Which direction does " + player.getPlayerName() + " decide to go, right (r) or left (l)?");
+
+	boolean validInput;
+	do {
+		String input = scanner.nextLine();
+		validInput = true;
+		
+	        if (input.equalsIgnoreCase("r")) {
+	        	System.out.println(player.getPlayerName() + " heads right at the end of the hallway, but while they continue down the hallway they fall into a trap!");
+			System.out.println(player.getPlayerName() + " awakes where their journey began, forgetting how they arrived back here.");
+			exitRoom(player, scanner);
+		} else if (input.equalsIgnoreCase("l")) {
+			System.out.println(player.getPlayerName() + " heads left at the end of the hallway and arrives at another question!");
+			roomActivityPart3(player, scanner);
+	        } else {
+	        	System.out.println("Your input was not recognized by the system, please try again.");
+			validInput = false;
+	        }
+		
+	} while (! validInput);
     }
 
 	/**
