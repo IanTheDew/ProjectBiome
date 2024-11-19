@@ -20,7 +20,7 @@ public class ProjectBiome{
         System.out.println("║          Welcome to              ║");
         System.out.println("║         Project Biome!           ║");
         System.out.println("╚══════════════════════════════════╝\n");
-        System.out.println("Press any key to start");
+        System.out.println("Press any key to start (press 'm' at any time to open menu)");
         scanner.nextLine();
         System.out.println("Hello traveler, what is your name?: ");
             
@@ -39,6 +39,14 @@ public class ProjectBiome{
         gameTime = System.nanoTime() - gameTime;
         int gameTimeSeconds = (int)(gameTime / 1e9d);
         System.out.println("Thank you for playing. \nTotal game time: " + gameTimeSeconds + " seconds");
+    }
+
+    /*
+     * Menu prompt that gives option to pause game or look at inventory
+     */
+    public static void gameMenu() {
+        System.out.println("Game Menu");
+            
     }
 }
 
