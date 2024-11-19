@@ -10,7 +10,7 @@ public class TundraRoom extends Rooms {
     public static void roomActivity(Player player, Scanner scanner) {
     	System.out.println("You are in a puzzle, will you successfully solve the puzzle (y)?");
         if (scanner.nextLine().equalsIgnoreCase("y")) {
-        	System.out.println("Congrats " + player.playerName + "! You have solved the puzzle and obtained the Tundra Key!");
+        	System.out.println("Congrats " + player.getPlayerName() + "! You have solved the puzzle and obtained the Tundra Key!");
         	player.collectItem("Tundra Key");
         	exitRoom(player, scanner);
         } else {
