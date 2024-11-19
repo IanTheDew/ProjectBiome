@@ -8,30 +8,33 @@ public class TundraRoom extends Rooms {
 	Description: Rooms and puzzles are navigated
 	**/
     public static void roomActivity(Player player, Scanner scanner) {
-    	System.out.println("You are in a puzzle, will you successfully solve the puzzle (y)?");
-        if (scanner.nextLine().equalsIgnoreCase("y")) {
-        	System.out.println("Congrats " + player.getPlayerName() + "! You have solved the puzzle and obtained the Tundra Key!");
-        	player.collectItem("Tundra Key");
-        	exitRoom(player, scanner);
-        } else {
-        	
-        	boolean validInput;
-        	
-        	do {
-        	    validInput = true;
-	            System.out.println("You have failed the puzzle! Would you like to retry (r) or exit back to the lobby (n)?");
-	            String input = scanner.nextLine();
-	            if (input.equalsIgnoreCase("r")) {
-	            	roomActivity(player, scanner);
-	            } else if (input.equalsIgnoreCase("n")) {
-	            	exitRoom(player, scanner);
-	            } else {
-	            	System.out.println("Your input was not recognized, please try again");
-	            	validInput = false;
-	            }
-	            
-        	} while (!validInput);
-        }
+    	System.out.println(player.getPlayerName() + " comes across a large Igloo and decides to enter through the front.");
+	System.out.println(player.getPlayerName() + " encounters a question inscribed at the end of a hallway.");
+	System.out.println("The question reads \"How many sides does a snowflake have\", with an arrow pointing right with a 6 above it and an arrow pointing left with a 4 above it.");
+	System.out.println("Which direction does " + player.getPlayerName() + " decide to go, right (r) or left (l)?");
+
+	boolean validInput;
+	do {
+		String input = scanner.nextLine();
+		validInput = true;
+		
+	        if (input.equalsIgnoreCase("r")) {
+	        	System.out.println(player.getPlayerName() + " heads right at the end of the hallway and arrives at another question!");
+			roomActivityPart2(player, scanner);
+		} else if (input.equalsIgnoreCase("l")) {
+			System.out.println(player.getPlayerName() + " heads left at the end of the hallway, but while they continue down the hallway they fall into a trap!");
+			System.out.println(player.getPlayerName() + " awakes where their journey began, forgetting how they arrived back here.");
+			exitRoom(player, scanner);
+	        } else {
+	        	System.out.println("Your input was not recognized by the system, please try again.");
+			validInput = false;
+	        }
+		
+	} while (! validInput);
+    }
+
+    public static void roomActivityPart2(Player player, Scanner scanner) {
+
     }
 
 	/**

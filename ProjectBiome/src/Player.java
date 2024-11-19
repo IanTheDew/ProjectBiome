@@ -24,6 +24,33 @@ public class Player {
         return playerName;
     }
 
+    /**
+    Description: A getter that prints out every item in the player's inventory
+    **/
+    public void getInventory() {
+        if (inventory.isEmpty()) {
+            System.out.println("Your inventory is empty.");
+        } else {
+            System.out.println("Your inventory contains:");
+            for (String item : inventory) {
+                System.out.println("- " + item);
+            }
+        }
+    }
+
+    /**
+    * Checks whether or not a key been obtain already or not
+    * @param key
+    * @return true if key is in inventory, false otherwise
+    */
+    public boolean checkKey(String key) {
+    	for (String item : inventory) {
+            if (item.equals(key)) {
+            	return true;
+            }
+        }
+    	return false;
+    }
     
     /**
     @param item that is added to the inventory array list
@@ -39,4 +66,6 @@ public class Player {
     public boolean hasAllKeys() {
     	return (inventory.contains("Desert Key") && inventory.contains("Tundra Key") && inventory.contains("Jungle Key"));
     }
+
+    
 }
