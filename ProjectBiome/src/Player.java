@@ -37,6 +37,21 @@ public class Player {
             }
         }
     }
+
+    /**
+    * Checks whether or not a key been obtain already or not
+    * @param key
+    * @return true if key is in inventory, false otherwise
+    */
+    public boolean checkKey(String key) {
+    	for (String item : inventory) {
+            if (item.equals(key)) {
+            	return true;
+            }
+        }
+    	return false;
+    }
+    
     /**
     @param item that is added to the inventory array list
     Description: adds a key and/or weapon/other item to the inventory array list
