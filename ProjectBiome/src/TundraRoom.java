@@ -58,6 +58,26 @@ public class TundraRoom extends Rooms {
 	} while (! validInput);
     }
 
+    public static void roomActivityPart3(Player player, Scanner scanner) {
+	System.out.println("The question reads \"Which month typically has the coldest temperatures?\"");
+	System.out.println("The arrow pointing right has the answer \"December\" above it and the arrow pointing left has the answer \"January\" above it.");
+	System.out.println("Which direction does " + player.getPlayerName() + " decide to go, right (r) or left (l)?");
+
+	 if (input.equalsIgnoreCase("r")) {
+	        	System.out.println(player.getPlayerName() + " heads right at the end of the hallway, but while they continue down the hallway they fall into a trap!");
+			System.out.println(player.getPlayerName() + " awakes where their journey began, forgetting how they arrived back here.");
+			exitRoom(player, scanner);
+		} else if (input.equalsIgnoreCase("l")) {
+			System.out.println(player.getPlayerName() + " heads left at the end of the hallway and arrives at the Tundra Key!");
+		 	System.out.println(player.getPlayerName() + " grabs the key and returns to the beginning room.");
+		 	player.collectItem("Tundra Key");
+			exitRoom(player, scanner);
+	        } else {
+	        	System.out.println("Your input was not recognized by the system, please try again.");
+			validInput = false;
+	 }
+	    
+    }
 	/**
       	@param player navigating the tundra room
         @param scanner to take input
