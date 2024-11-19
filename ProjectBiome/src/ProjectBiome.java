@@ -20,6 +20,8 @@ public class ProjectBiome{
         System.out.println("║          Welcome to              ║");
         System.out.println("║         Project Biome!           ║");
         System.out.println("╚══════════════════════════════════╝\n");
+        System.out.println("Press any key to start");
+        scanner.nextLine();
         System.out.println("Hello traveler, what is your name?: ");
             
         //get user name and make player object
@@ -35,6 +37,8 @@ public class ProjectBiome{
     public static void endGame(long gameTime) {
         //get total game time
         gameTime = System.nanoTime() - gameTime;
-        System.out.println("Thank you for playing. \nTotal game time: " + gameTime);
+        int gameTimeSeconds = (int)(gameTime / 1e9d);
+        System.out.println("Thank you for playing. \nTotal game time: " + gameTimeSeconds + " seconds");
     }
 }
+
