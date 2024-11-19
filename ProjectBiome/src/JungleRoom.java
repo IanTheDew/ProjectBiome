@@ -20,7 +20,7 @@ public class JungleRoom extends Rooms
 		if(scanner.nextLine().equalsIgnoreCase("y")
 		   {
 			int endCond = 0; // once this reaches 3, the puzzle is complete
-			int rand_roll = rand.nextInt(3) + 1
+			int rand_roll = rand.nextInt(3) + 1;
 			while(endCond != 3)
 			{
 				if(rand_roll.equals(1) || rand_roll.equals(3))
@@ -30,7 +30,7 @@ public class JungleRoom extends Rooms
 				if(rand_roll.equals(2))
 				{
 					endCond++;
-					System.out.print("Hit! Good going, " + player.name + ". ");
+					System.out.print("Hit! Good going, " + player.getPlayerName() + ". ");
 				}
 			}
 			puzzleSolved = true;
@@ -38,7 +38,7 @@ public class JungleRoom extends Rooms
 		
         	System.out.print("The enemy is down. There is a key around its neck. You take it.");
         	player.collectItem("Jungle Key");
-		System.out.print("The Jungle Key is in your possession and you return to the lobby."
+		System.out.print("The Jungle Key is in your possession and you return to the lobby.");
         	exitRoom(player, scanner);
         	
         } else {
