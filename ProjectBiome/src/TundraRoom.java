@@ -33,6 +33,10 @@ public class TundraRoom extends Rooms {
 	} while (! validInput);
     }
 
+    public static void roomActivityPart2(Player player, Scanner scanner) {
+
+    }
+
 	/**
       	@param player navigating the tundra room
         @param scanner to take input
