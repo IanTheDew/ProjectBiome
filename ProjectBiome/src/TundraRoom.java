@@ -34,7 +34,9 @@ public class TundraRoom extends Rooms {
     }
 
     public static void roomActivityPart2(Player player, Scanner scanner) {
-
+	System.out.println("The question reads \"What is the shortest day of the year called?\"");
+	System.out.println("The arrow pointing right has the answer \"Winter Equinox\" above it and the arrow pointing left has the answer \"above it.");
+	System.out.println("Which direction does " + player.getPlayerName() + " decide to go, right (r) or left (l)?");
     }
 
 	/**
