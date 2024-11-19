@@ -17,7 +17,7 @@ public class JungleRoom extends Rooms
         if (scanner.nextLine().equals("y")) 
 	{
 		System.out.println("There are enemies in front of you. Attack?");
-		if(scanner.nextLine().equalsIgnoreCase("y")
+		if (scanner.nextLine().equalsIgnoreCase("y"))
 		   {
 			int endCond = 0; // once this reaches 3, the puzzle is complete
 			int rand_roll = rand.nextInt(3) + 1;
@@ -76,7 +76,7 @@ public class JungleRoom extends Rooms
             if (userInput.equalsIgnoreCase("l")) {
                 exitRoom(player, scanner);
             } else if (userInput.equals("p")) {
-                roomActivityIgnoreCase(player, scanner);
+                roomActivity(player, scanner);
             } else {
                 System.out.println("Your input was not recognized, please try again");
                 validInput = false;
@@ -91,7 +91,7 @@ public class JungleRoom extends Rooms
 	Description: Prompts for user input when exiting the jungle room
 	**/
     public static void exitRoom(Player player, Scanner scanner) {
-        lobbyRoom.enterRoom(player, scanner);
+        LobbyRoom.enterRoom(player, scanner);
     }
     
 }

@@ -45,7 +45,7 @@ public class FinalRoom extends Rooms {
 	Description: Prompts for user input when exiting the final room
 	**/
     private static void exitRoom(Player player, Scanner scanner) {
-        lobbyRoom.enterRoom(player, scanner);
+        LobbyRoom.enterRoom(player, scanner);
     }
         
     

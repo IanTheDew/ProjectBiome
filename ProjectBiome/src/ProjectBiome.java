@@ -26,7 +26,7 @@ public class ProjectBiome{
         String name = scanner.nextLine();
         Player player = new Player(name);
         
-        lobbyRoom.enterRoom(player, scanner);
+        LobbyRoom.enterRoom(player, scanner);
         return gameTime;
     }
     /**

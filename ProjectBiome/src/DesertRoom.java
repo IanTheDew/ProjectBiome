@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class desertRoom extends Rooms {
+public class DesertRoom extends Rooms {
 	private static final String correctAnswer = "sandstorm";
 	private static boolean puzzleSolved = false;
 
@@ -57,6 +57,6 @@ public class desertRoom extends Rooms {
 
 	private static void exitRoom(Player player, Scanner scanner) {
 		System.out.println("You leave the Desert Room and return to the lobby.");
-		lobbyRoom.enterRoom(player, scanner);
+		LobbyRoom.enterRoom(player, scanner);
 	}
 }

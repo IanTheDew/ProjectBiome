@@ -7,7 +7,7 @@ public class LobbyRoom extends Rooms  {
 	@param scanner to take input
 	Description: Rooms and puzzles are navigated
 	**/
-    public static void RoomActivity(Player player, Scanner scanner) {
+    public static void roomActivity(Player player, Scanner scanner) {
     	boolean validInput;
     	
 		do {
@@ -16,14 +16,14 @@ public class LobbyRoom extends Rooms  {
 	        	String input = scanner.nextLine();
 	        
 		        if (input.equalsIgnoreCase("b")) {
-		            tundraRoom.enterRoom(player, scanner);
+		            TundraRoom.enterRoom(player, scanner);
 		        } else if (input.equalsIgnoreCase("g")) {
-		            jungleRoom.enterRoom(player, scanner);
+		            JungleRoom.enterRoom(player, scanner);
 		        } else if (input.equals("y")) {
-		        	desertRoom.enterRoom(player, scanner);
+		        	DesertRoom.enterRoom(player, scanner);
 		        } else if (input.equalsIgnoreCase("a")) {
 		        	if (player.hasAllKeys()) {
-		        		finalRoom.enterRoom(player, scanner);
+		        		FinalRoom.enterRoom(player, scanner);
 		        	} else {
 		        		System.out.println("You don't have the required keys to enter this area!!");
 		        		validInput = false;

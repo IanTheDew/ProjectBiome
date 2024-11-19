@@ -64,7 +64,7 @@ public class TundraRoom extends Rooms {
 	Description: Prompts for user input when exiting the tundra room
 	**/
     public static void exitRoom(Player player, Scanner scanner) {
-    	lobbyRoom.enterRoom(player, scanner);
+    	LobbyRoom.enterRoom(player, scanner);
     }
     
 }
