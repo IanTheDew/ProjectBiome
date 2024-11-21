@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DesertRoom extends Rooms {
+public class DesertRoom Rooms {
 	private static final String correctAnswer = "sandstorm";
 	private static boolean puzzleSolved = false;
 
