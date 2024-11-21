@@ -20,7 +20,7 @@
 // }
 import java.util.Scanner;
 
-public class JungleRoom extends Rooms {
+public class JungleRoom Rooms {
 	/**
       	@param player navigating the room
         @param scanner to take input
