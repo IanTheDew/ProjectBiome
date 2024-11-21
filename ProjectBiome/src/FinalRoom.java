@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class FinalRoom extends Rooms {
+public class FinalRoom Rooms {
 
 	/**
       	@param player navigating the final room
