@@ -23,6 +23,7 @@ public class TundraRoom Rooms {
 			roomActivityPart2(player, scanner);
 		} else if (input.equalsIgnoreCase("l")) {
 			System.out.println(player.getPlayerName() + " heads left at the end of the hallway, but while they continue down the hallway they fall into a trap!");
+			System.out.print("Unaware at how the arrived back here, ");
 			exitRoom(player, scanner);
 	        } else {
 	        	System.out.println("Your input was not recognized by the system, please try again.");
@@ -44,6 +45,7 @@ public class TundraRoom Rooms {
 		
 	        if (input.equalsIgnoreCase("r")) {
 	        	System.out.println(player.getPlayerName() + " heads right at the end of the hallway, but while they continue down the hallway they fall into a trap!");
+			System.out.print("Unaware at how the arrived back here, ");
 			exitRoom(player, scanner);
 		} else if (input.equalsIgnoreCase("l")) {
 			System.out.println(player.getPlayerName() + " heads left at the end of the hallway and arrives at another question!");
@@ -63,6 +65,7 @@ public class TundraRoom Rooms {
 
 	 if (input.equalsIgnoreCase("r")) {
 	        	System.out.println(player.getPlayerName() + " heads right at the end of the hallway, but while they continue down the hallway they fall into a trap!");
+		 	System.out.print("Unaware at how the arrived back here, ");
 			exitRoom(player, scanner);
 		} else if (input.equalsIgnoreCase("l")) {
 			System.out.println(player.getPlayerName() + " heads left at the end of the hallway and arrives at the Tundra Key!");
