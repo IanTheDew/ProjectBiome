@@ -21,6 +21,40 @@
 import java.util.Scanner;
 
 public class JungleRoom Rooms {
+/**
+      	@param player navigating the jungle room
+        @param scanner to take input
+	Description: Prompts for user input when entering the jungle room
+	**/
+    public static void enterRoom(Player player, Scanner scanner) {
+    	// check if player already has the key..
+    	if (player.checkKey("Jungle Key")) {
+		System.out.println("You already have the jungle key!");
+		exitRoom(player, scanner);
+    	}
+    	
+    	// print a description of the room
+    	System.out.println("You walk through the green door into a large open and lush jungle. \n" +
+	    "You encounter a group of green goblins where you can see \n"
+	    + "the leader has the green key hanging from a necklace around their neck.\n");
+    	
+        boolean validInput;
+        do {
+        	validInput = true;
+	    System.out.println("Would you like to leave this room (l) or engage the goblins (p)?");
+	    String userInput = scanner.nextLine();
+            
+            if (userInput.equalsIgnoreCase("l")) {
+                exitRoom(player, scanner);
+            } else if (userInput.equals("p")) {
+                roomActivity(player, scanner);
+            } else {
+                System.out.println("Your input was not recognized, please try again");
+                validInput = false;
+            }
+        } while (!validInput);
+    }
+	
 	/**
       	@param player navigating the room
         @param scanner to take input
