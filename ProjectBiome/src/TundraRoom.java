@@ -8,6 +8,11 @@ public class TundraRoom {
 	Description: Prompts for user input when entering the tundra room
 	**/
 	public static void enterRoom(Player player, Scanner scanner) {
+		
+		if (player.checkKey("Tundra Key")) {
+			System.out.println("You already have the tundra key!");
+			exitRoom(player, scanner);
+		}
 	    	System.out.println("You immediately start shivering, as a tundra expands out around you");
 	    	boolean validInput;
 		do {
