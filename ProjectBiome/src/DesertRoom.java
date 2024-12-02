@@ -5,6 +5,10 @@ public class DesertRoom {
 	private static final boolean puzzleSolved = false;
 
 	public static void enterRoom(Player player, Scanner scanner) {
+		if (player.checkKey("Desert Key")) {
+			System.out.println("You already have the desert key!");
+			exitRoom(player, scanner);
+    		}
 		System.out.println("You step into the Desert Room. You feel the intense heat and see a pedestal in the center.");
 		boolean validInput;
 		do {
