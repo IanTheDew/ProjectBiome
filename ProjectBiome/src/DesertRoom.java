@@ -9,7 +9,7 @@ public class DesertRoom Rooms {
 		boolean validInput;
 		do {
 			validInput = true;
-			System.out.println("Would you like to leave this room (l) or attempt to solve the puzzle (p)?");
+			System.out.println("Would you like to leave this room (enter L) or explore the pedestal (enter P)?");
 			String userInput = scanner.nextLine();
 
 			if (userInput.equalsIgnoreCase("l")) {
