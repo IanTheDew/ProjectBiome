@@ -24,7 +24,7 @@ public class DesertRoom Rooms {
 	}
 
 	public static void roomActivity(Player player, Scanner scanner) {
-		System.out.println("You step into the Desert Room. A pedestal stands in the center, with a key locked behind a mysterious riddle.");
+		System.out.println(Player.getPlayerName() + " notices a key inside the pedestal locked behind a mysterious riddle.");
 		System.out.println("To obtain the key, solve this riddle:");
 
 		// Riddle prompt
