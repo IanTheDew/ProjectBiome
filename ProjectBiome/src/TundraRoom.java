@@ -42,11 +42,11 @@ public class TundraRoom {
 	}
 
 
-		/**
-		@param player navigating the tundra room
-		@param scanner to take input
-		Description: First part of the puzzle for the tundra room
-		**/
+	/**
+	@param player navigating the tundra room
+	@param scanner to take input
+	Description: First part of the puzzle for the tundra room
+	**/
     	public static void roomActivity(Player player, Scanner scanner) {
 	    	System.out.println(player.getPlayerName() + " comes across a large Igloo and decides to enter through the front.");
 			System.out.println(player.getPlayerName() + " encounters a question inscribed at the end of a hallway.");
@@ -74,10 +74,10 @@ public class TundraRoom {
     	}
     	
     	/**
-		@param player navigating the tundra room
-		@param scanner to take input
-		Description: Second part of the puzzle for the tundra room
-		**/
+	@param player navigating the tundra room
+	@param scanner to take input
+	Description: Second part of the puzzle for the tundra room
+	**/
     	public static void roomActivityPart2(Player player, Scanner scanner) {
 			System.out.println("The question reads \"What is the shortest day of the year called?\"");
 			System.out.println("The arrow pointing right has the answer \"Winter Equinox\" above it and the arrow pointing left has the answer \"Winter Solstice\" above it.");
