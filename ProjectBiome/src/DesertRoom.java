@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class DesertRoom Rooms {
 	private static final String correctAnswer = "sandstorm";
-	private static boolean puzzleSolved = false;
 
 	public static void enterRoom(Player player, Scanner scanner) {
 		System.out.println("You step into the Desert Room. You feel the intense heat and see a pedestal in the center.");
@@ -30,11 +29,12 @@ public class DesertRoom Rooms {
 		// Riddle prompt
 		System.out.println("\"I am the desert’s fury, unseen but relentless. I shape the dunes, yet I leave no trace. What am I?\"");
 
+		boolean puzzleSolved = false;
 		while (!puzzleSolved) {
 			System.out.print("Enter your answer (or type 'hint' for a clue): ");
 			String playerInput = scanner.nextLine().trim();
 
-			checkAnswer(playerInput, player, scanner);
+			puzzleSolved = checkAnswer(playerInput, player, scanner);
 		}
 	}
 
