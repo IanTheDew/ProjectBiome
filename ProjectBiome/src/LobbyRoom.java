@@ -42,7 +42,7 @@ public class LobbyRoom Rooms  {
 	**/
     public static void enterRoom (Player player, Scanner scanner) {
         // Room entering logic
-    	System.out.println("you see a long hallway with three doors and a large gate requiring three keys...");
+    	System.out.println(player.getPlayerName() + " arrives at the room with three colored doors and a spiriling staircase leading to a locked door");
     	roomActivity(player, scanner);
     }
     
