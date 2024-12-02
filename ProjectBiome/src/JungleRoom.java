@@ -11,22 +11,22 @@
 import java.util.Scanner;
 
 public class JungleRoom {	
-	/**
-  	@param player navigating the room
+    /**
+    @param player navigating the room
     @param scanner to take input
-	Description: Room and puzzles are navigated
-	**/
+    Description: Room and puzzles are navigated
+    **/
     public static void roomActivity(Player player, Scanner scanner) {
     	
 	boolean complete = false; // if room was completed
 	char choice;
 	
 	do {
-		displayMenu();
-		choice = scanner.nextLine().toUpperCase().charAt(0);
+	    displayMenu();
+	    choice = scanner.nextLine().toUpperCase().charAt(0);
 	    switch (choice) {
 		case 'F':
-		     // do room activity
+		    // do room activity
 		    System.out.println("You engage the goblins, they look at you menacingly");
 		    System.out.println("With your sword drawn, you feel a surge of confidence. The goblin leader sneers, but you stand your ground.");
 		    System.out.println("The other goblins hesitate, clearly intimidated by your weapon. Do you:");
@@ -54,12 +54,12 @@ public class JungleRoom {
 		    }
 		    break;
 		case 'L':
-			// leave the room
-			System.out.println("You spot a nearby bush and make a break for it! You escape into the jungle, leaving the goblins behind.");
-			complete = true;
+		    // leave the room
+		    System.out.println("You spot a nearby bush and make a break for it! You escape into the jungle, leaving the goblins behind.");
+		    complete = true;
 		    break;
 		case 'O':
-			// get keys from inventory
+		    // get keys from inventory
 		    System.out.println("Opening inventory...");
 		    player.getInventory();
 		    break;
@@ -68,14 +68,15 @@ public class JungleRoom {
 	    }
 	} while (!complete);
 		
-		// exit the room if complete
+	// exit the room if complete
     	exitRoom(player, scanner);
     }
+	
     /**
-  	@param player navigating the jungle room
+    @param player navigating the jungle room
     @param scanner to take input
-	Description: Prompts for user input when entering the jungle room
-	**/
+    Description: Prompts for user input when entering the jungle room
+    **/
     public static void enterRoom(Player player, Scanner scanner) {
     	// check if player already has the key..
     	if (player.checkKey("Jungle Key")) {
@@ -106,20 +107,20 @@ public class JungleRoom {
     }
 
     /**
-  	@param player navigating the jungle room
+    @param player navigating the jungle room
     @param scanner to take input
-	Description: Prompts for user input when exiting the jungle room
-	**/
+    Description: Prompts for user input when exiting the jungle room
+    **/
     public static void exitRoom(Player player, Scanner scanner) {
     	System.out.println(player.getPlayerName() + " leaves the Jungle Room");
         LobbyRoom.enterRoom(player, scanner);
     }
     
     /**
-	@param player navigating the jungle room
-	@param scanner to take input
-	Description: provide the user with list of things they can do
-	**/
+    @param player navigating the jungle room
+    @param scanner to take input
+    Description: provide the user with list of things they can do
+    **/
     public static void displayMenu() {
     	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("                ~*~ Jungle Encounter ~*~                 ");
