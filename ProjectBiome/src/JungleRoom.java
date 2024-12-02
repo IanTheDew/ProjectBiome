@@ -1,29 +1,19 @@
-// THIS IS RANDOM GENERATOR CODE I MIGHT USE IN THE FUTURE - shea
-// private static boolean puzzleSolved = false;
-// Random rand = new Random();
-	
-// int endCond = 0; // once this reaches 3, the puzzle is complete
-// Random rand = new Random();
-// int rand_roll = rand.nextInt(3) + 1;
-// while(endCond != 3)
-// {
-// 	if(rand_roll == 1 || rand_roll == 3)
-// 	{
-// 		System.out.print("You missed. How unfortunate.");
-// 	}
-// 	if(rand_roll == 2)
-// 	{
-// 		endCond++;
-// 		System.out.print("Hit! Good going, " + player.getPlayerName() + ". ");
-// 		puzzleSolved = true;
-// 	}
-// }
+/**
+* Class: ClassName
+* @authors Ethan Ciota, Shalom Biswa, Ian Dewey, Shea Sullivan, Madeline Swisher, Lucas Williams-Heim
+* @version 2.0
+* Course : CSE 201 Fall 2024
+* Written: Dec 2, 2024
+*
+* Purpose: Carries out the jungle room sequence in the game
+*/
+
 import java.util.Scanner;
 
 public class JungleRoom {	
 	/**
-      	@param player navigating the room
-        @param scanner to take input
+  	@param player navigating the room
+    @param scanner to take input
 	Description: Room and puzzles are navigated
 	**/
     public static void roomActivity(Player player, Scanner scanner) {
@@ -33,7 +23,7 @@ public class JungleRoom {
 	
 	do {
 		displayMenu();
-		choice = scanner.nextLine().charAt(0);
+		choice = scanner.nextLine().toUpperCase().charAt(0);
 	    switch (choice) {
 		case 'F':
 		     // do room activity
@@ -42,15 +32,19 @@ public class JungleRoom {
 		    System.out.println("The other goblins hesitate, clearly intimidated by your weapon. Do you:");
 		    System.out.println("1. Charge at the goblins with a fierce battle cry! (enter C)");
 		    System.out.println("2. Attempt to negotiate with the goblins, offering them treasure for safe passage. (enter N)");
-		    choice = scanner.nextLine().charAt(0);
+		    
+		    choice = scanner.nextLine().toUpperCase().charAt(0);
+		    
 		    switch (choice) {
 			case 'C':
 				System.out.println("You charge at the goblins with a battle cry! They scatter in fear, throwing they key at you as they run away.");
+				System.out.println(player.getPlayerName() + " grabs the key and returns to the beginning room.");
 				player.collectItem("Jungle Key");
-			    	complete = true;
-			    	break;
+			    complete = true;
+			    break;
 			case 'N':
 				System.out.println("You offer the goblins some treasure. They consider your proposal and ultimately trade their key for it.");
+				System.out.println(player.getPlayerName() + " grabs the key and returns to the beginning room.");
 				player.collectItem("Jungle Key");
 				complete = true;
 				break;
@@ -78,8 +72,8 @@ public class JungleRoom {
     	exitRoom(player, scanner);
     }
     /**
-      	@param player navigating the jungle room
-        @param scanner to take input
+  	@param player navigating the jungle room
+    @param scanner to take input
 	Description: Prompts for user input when entering the jungle room
 	**/
     public static void enterRoom(Player player, Scanner scanner) {
@@ -97,12 +91,12 @@ public class JungleRoom {
         boolean validInput;
         do {
         	validInput = true;
-	    System.out.println("Would you like to leave this room (l) or engage the goblins (p)?");
+	    System.out.println("Would you like to leave this room (enter L) or engage the goblins (enter P)?");
 	    String userInput = scanner.nextLine();
             
             if (userInput.equalsIgnoreCase("l")) {
                 exitRoom(player, scanner);
-            } else if (userInput.equals("p")) {
+            } else if (userInput.equalsIgnoreCase("p")) {
                 roomActivity(player, scanner);
             } else {
                 System.out.println("Your input was not recognized, please try again");
@@ -112,25 +106,29 @@ public class JungleRoom {
     }
 
     /**
-      	@param player navigating the jungle room
-        @param scanner to take input
+  	@param player navigating the jungle room
+    @param scanner to take input
 	Description: Prompts for user input when exiting the jungle room
 	**/
     public static void exitRoom(Player player, Scanner scanner) {
-    	System.out.println("Player '" + player.getPlayerName() + "' is leaving the Jungle Room");
+    	System.out.println(player.getPlayerName() + " leaves the Jungle Room");
         LobbyRoom.enterRoom(player, scanner);
     }
     
-    // provide the user with list of things they can do
+    /**
+	@param player navigating the jungle room
+	@param scanner to take input
+	Description: provide the user with list of things they can do
+	**/
     public static void displayMenu() {
     	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("                ~*~ Jungle Encounter ~*~                 ");
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("                  What will you do?:                     ");
         System.out.println("----------------------------------------------------------");
-        System.out.println("|  1. Fight the goblins... (press F)                     |");
-        System.out.println("|  2. Flee... (press L)                                  |");
-        System.out.println("|  3. Open Your Inventory... (press O)                   |");
+        System.out.println("|  1. Fight the goblins... (enter F)                     |");
+        System.out.println("|  2. Flee... (enter L)                                  |");
+        System.out.println("|  3. Open Your Inventory... (enter O)                   |");
         System.out.println("----------------------------------------------------------");
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.print("Choose an option: ");
