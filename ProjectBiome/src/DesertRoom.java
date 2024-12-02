@@ -11,8 +11,13 @@
 import java.util.Scanner;
 
 public class DesertRoom {
-	private static final String correctAnswer = "sandstorm";
-
+	private static final String correctAnswer = "sandstorm"; // answer needed to solve the riddle in the puzzle section
+	
+	/**
+  	@param player navigating the desert room
+    @param scanner to take input
+	Description: Prompts for user input when entering the desert room
+	**/
 	public static void enterRoom(Player player, Scanner scanner) {
 		if (player.checkKey("Desert Key")) {
 			System.out.println("You already have the desert key!");
@@ -36,6 +41,11 @@ public class DesertRoom {
 		} while (!validInput);
 	}
 
+	/**
+  	@param player navigating the desert room
+    @param scanner to take input
+	Description: Puzzle activity for the desert room
+	**/
 	public static void roomActivity(Player player, Scanner scanner) {
 		System.out.println(player.getPlayerName() + " notices a key inside the pedestal locked behind a mysterious riddle.");
 		System.out.println("To obtain the key, solve this riddle:");
@@ -49,16 +59,19 @@ public class DesertRoom {
 			System.out.print("Enter your answer (or type 'hint' for a clue): ");
 			String playerInput = scanner.nextLine().trim();
 
-			puzzleSolved = checkAnswer(playerInput, player, scanner);
+			puzzleSolved = checkAnswer(playerInput);
 		}
 		
+		player.collectItem("Desert Key");
 		exitRoom(player, scanner);
 	}
-
-	private static boolean checkAnswer(String input, Player player, Scanner scanner) {
+	
+	/**
+	 * Description: Checks the user's inputted answer for the puzzle section
+	 */
+	private static boolean checkAnswer(String input) {
 		if (input.equalsIgnoreCase(correctAnswer)) {
 			System.out.println("The pedestal clicks open, and you have obtained the Desert Key!");
-			player.collectItem("Desert Key");
 			return true;
 		} else if (input.equalsIgnoreCase("hint")) {
 			giveHint();
@@ -67,13 +80,21 @@ public class DesertRoom {
 		}
 		return false;
 	}
-
+	
+	/**
+	 * Description: Gives the user a hint towards the riddle
+	 */
 	private static void giveHint() {
 		System.out.println("Hint: It’s a force of nature, often fierce and blinding, but made of sand and wind.");
 	}
 
+	/**
+	 * @param player navigating the desert room
+	 * @param scanner to take input
+	 * Description: Exits the desert room back to the lobby
+	 */
 	private static void exitRoom(Player player, Scanner scanner) {
-		System.out.println("You leave the Desert Room and return to the lobby.");
+		System.out.println(player.getPlayerName() + " leaves the Desert Room");
 		LobbyRoom.enterRoom(player, scanner);
 	}
 }
