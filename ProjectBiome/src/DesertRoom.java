@@ -1,8 +1,17 @@
+/**
+* Class: DessertRoom
+* @authors Ethan Ciota, Shalom Biswa, Ian Dewey, Shea Sullivan, Madeline Swisher, Lucas Williams-Heim
+* @version 2.0
+* Course : CSE 201 Fall 2024
+* Written: Dec 2, 2024
+*
+* Purpose: Carries out the dessert room sequence in the game
+*/
+
 import java.util.Scanner;
 
 public class DesertRoom {
 	private static final String correctAnswer = "sandstorm";
-	private static final boolean puzzleSolved = false;
 
 	public static void enterRoom(Player player, Scanner scanner) {
 		if (player.checkKey("Desert Key")) {
@@ -33,20 +42,23 @@ public class DesertRoom {
 
 		// Riddle prompt
 		System.out.println("\"I am the desert’s fury, unseen but relentless. I shape the dunes, yet I leave no trace. What am I?\"");
-
+		
+		boolean puzzleSolved = false;
+		
 		while (!puzzleSolved) {
 			System.out.print("Enter your answer (or type 'hint' for a clue): ");
 			String playerInput = scanner.nextLine().trim();
 
-			checkAnswer(playerInput, player, scanner);
+			puzzleSolved = checkAnswer(playerInput, player, scanner);
 		}
+		
+		exitRoom(player, scanner);
 	}
 
 	private static boolean checkAnswer(String input, Player player, Scanner scanner) {
 		if (input.equalsIgnoreCase(correctAnswer)) {
 			System.out.println("The pedestal clicks open, and you have obtained the Desert Key!");
 			player.collectItem("Desert Key");
-			exitRoom(player, scanner);
 			return true;
 		} else if (input.equalsIgnoreCase("hint")) {
 			giveHint();
