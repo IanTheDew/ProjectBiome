@@ -1,3 +1,14 @@
+/**
+* Class: ProjectBiome
+* @authors Ethan Ciota, Shalom Biswa, Ian Dewey, Shea Sullivan, Madeline Swisher, Lucas Williams-Heim
+* @version 2.0
+* Course : CSE 201 Fall 2024
+* Written: Dec 2, 2024
+*
+* Purpose: Contains the main method and initiates the start of the game and helps with the end of game sequence
+*/
+
+
 import java.util.Scanner;
 
 public class ProjectBiome{
@@ -20,7 +31,7 @@ public class ProjectBiome{
         System.out.println("║          Welcome to              ║");
         System.out.println("║         Project Biome!           ║");
         System.out.println("╚══════════════════════════════════╝\n");
-        System.out.println("Press any key to start");
+        System.out.println("Press Enter to start");
         scanner.nextLine();
         System.out.println("Hello traveler, what is your name?: ");
             
@@ -33,6 +44,7 @@ public class ProjectBiome{
         LobbyRoom.enterRoom(player, scanner);
         return gameTime;
     }
+    
     /**
     Description: ends the game, prints the total playtime, and prompts the end message
      **/
@@ -41,14 +53,6 @@ public class ProjectBiome{
         gameTime = System.nanoTime() - gameTime;
         int gameTimeSeconds = (int)(gameTime / 1e9d);
         System.out.println("Thank you for playing. \nTotal game time: " + gameTimeSeconds + " seconds");
-    }
-
-    /*
-     * Menu prompt that gives option to pause game or look at inventory
-     */
-    public static void gameMenu() {
-        System.out.println("Game Menu");
-            
     }
 }
 
