@@ -1,12 +1,22 @@
+/**
+* Class: LobbyRoom
+* @authors Ethan Ciota, Shalom Biswa, Ian Dewey, Shea Sullivan, Madeline Swisher, Lucas Williams-Heim
+* @version 2.0
+* Course : CSE 201 Fall 2024
+* Written: Dec 2, 2024
+*
+* Purpose: Home hub for the player where they can initiate other room sequences and return back here
+*/
+
 import java.util.Scanner;
 
 public class LobbyRoom {
 
-	/**
-      	@param player navigating the lobby room
-        @param scanner to take input
-	Description: Prompts for user input when entering the lobby room
-	**/
+    /**
+    @param player navigating the lobby room
+    @param scanner to take input
+    Description: Prompts for user input when entering the lobby room
+    **/
     public static void enterRoom (Player player, Scanner scanner) {
         // Room entering logic
     	System.out.println(player.getPlayerName() + " arrives at the room with three colored doors and a spiriling staircase leading to a locked door");
@@ -14,11 +24,11 @@ public class LobbyRoom {
     }
     
 
-	/**
-	@param player navigating the lobby room
-	@param scanner to take input
-	Description: Rooms and puzzles are navigated
-	**/
+    /**
+    @param player navigating the lobby room
+    @param scanner to take input
+    Description: Rooms and puzzles are navigated
+    **/
     public static void roomActivity(Player player, Scanner scanner) {
     	boolean validInput;
     	
