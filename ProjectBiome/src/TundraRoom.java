@@ -132,11 +132,11 @@ public class TundraRoom {
 					validInput = false;
 			 }
 			} while (! validInput);
-    	}
+    }
 
 	/**
   	@param player navigating the tundra room
-    	@param scanner to take input
+   	@param scanner to take input
 	Description: Prompts for user input when exiting the tundra room
 	**/
 	public static void exitRoom(Player player, Scanner scanner) {
