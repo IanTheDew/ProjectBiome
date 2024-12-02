@@ -12,7 +12,7 @@ public class LobbyRoom Rooms  {
     	
 		do {
 			validInput = true;
-	        	System.out.println("Would you like to enter the blue door (b), green door (g), or yellow door (y) or appraoch the gate (a)?");
+	        	System.out.println("Would you like to enter the blue door (enter B), green door (enter G), or yellow door (enter Y) or try the locked door (enter L)?");
 	        	String input = scanner.nextLine();
 	        
 		        if (input.equalsIgnoreCase("b")) {
@@ -21,7 +21,7 @@ public class LobbyRoom Rooms  {
 		            JungleRoom.enterRoom(player, scanner);
 		        } else if (input.equals("y")) {
 		        	DesertRoom.enterRoom(player, scanner);
-		        } else if (input.equalsIgnoreCase("a")) {
+		        } else if (input.equalsIgnoreCase("l")) {
 		        	if (player.hasAllKeys()) {
 		        		FinalRoom.enterRoom(player, scanner);
 		        	} else {
