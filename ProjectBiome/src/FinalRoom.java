@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class FinalRoom Rooms {
+public class FinalRoom {
 
 /**
 @param player navigating the final room
@@ -48,4 +48,6 @@ Description: Prompts for user input when exiting the final room
 **/
 private static void exitRoom(Player player, Scanner scanner) {
         LobbyRoom.enterRoom(player, scanner);
+}
+
 }

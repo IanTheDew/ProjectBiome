@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TundraRoom Rooms {
+public class TundraRoom {
 	
 	/**
 	@param player navigating the tundra room
@@ -87,7 +87,11 @@ public class TundraRoom Rooms {
 		System.out.println("The question reads \"Which month typically has the coldest temperatures?\"");
 		System.out.println("The arrow pointing right has the answer \"December\" above it and the arrow pointing left has the answer \"January\" above it.");
 		System.out.println("Which direction does " + player.getPlayerName() + " decide to go, right (r) or left (l)?");
-	
+
+		boolean validInput;
+		do {
+			String input = scanner.nextLine();
+			validInput = true;
 		 if (input.equalsIgnoreCase("r")) {
 				System.out.println(player.getPlayerName() + " heads right at the end of the hallway, but while they continue down the hallway they fall into a trap!");
 				System.out.print("Unaware at how the arrived back here, ");
@@ -101,7 +105,8 @@ public class TundraRoom Rooms {
 				System.out.println("Your input was not recognized by the system, please try again.");
 				validInput = false;
 		 }
-    	}
+		} while (! validInput);
+    }
 
 	/**
       	@param player navigating the tundra room
