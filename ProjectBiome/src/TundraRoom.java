@@ -88,17 +88,17 @@ public class TundraRoom Rooms {
     	boolean validInput;
         do {
         	validInput = true;
-            System.out.println("Would you like to leave this room (enter L) or explore the futhter ahead in the Tundra (enter E)?");
-            String userInput = scanner.nextLine();
-            
-            if (userInput.equalsIgnoreCase("l")) {
-                exitRoom(player, scanner);
-            } else if (userInput.equalsIgnoreCase("e")) {
-                roomActivity(player, scanner);
-            } else {
-                System.out.println("Your input was not recognized, please try again");
-                validInput = false;
-            }
+            	System.out.println("Would you like to leave this room (enter L) or explore the futhter ahead in the Tundra (enter E)?");
+           	 String userInput = scanner.nextLine();
+            	
+            	if (userInput.equalsIgnoreCase("l")) {
+                	exitRoom(player, scanner);
+        	} else if (userInput.equalsIgnoreCase("e")) {
+                	roomActivity(player, scanner);
+            	} else {
+                	System.out.println("Your input was not recognized, please try again");
+               	 	validInput = false;
+            	}
         } while (!validInput);
     }
 
