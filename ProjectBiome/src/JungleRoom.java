@@ -45,18 +45,18 @@ public class JungleRoom Rooms {
 		    choice = scanner.nextLine().charAt(0);
 		    switch (choice) {
 			case 'C':
-			    System.out.println("You charge at the goblins with a battle cry! They scatter in fear, throwing they key at you as they run away.");
+				System.out.println("You charge at the goblins with a battle cry! They scatter in fear, throwing they key at you as they run away.");
 				player.collectItem("Jungle Key");
-			    complete = true;
-			    break;
+			    	complete = true;
+			    	break;
 			case 'N':
-			    System.out.println("You offer the goblins some treasure. They consider your proposal and ultimately trade their key for it.");
+				System.out.println("You offer the goblins some treasure. They consider your proposal and ultimately trade their key for it.");
 				player.collectItem("Jungle Key");
-			    complete = true;
-			    break;
+				complete = true;
+				break;
 			default:
-			    System.out.println("Confused, you hesitate, and the goblins take the opportunity to surround you!");
-			    break;
+			    	System.out.println("Confused, you hesitate, and the goblins take the opportunity to surround you!");
+			    	break;
 		    }
 		    break;
 		case 'L':
