@@ -105,10 +105,10 @@ public class TundraRoom {
 
     	
     	/**
-		@param player navigating the tundra room
-		@param scanner to take input
-		Description: Third and last part of the puzzle for the tundra room
-		**/
+	@param player navigating the tundra room
+	@param scanner to take input
+	Description: Third and last part of the puzzle for the tundra room
+	**/
     	public static void roomActivityPart3(Player player, Scanner scanner) {
 			System.out.println("The question reads \"Which month typically has the coldest temperatures?\"");
 			System.out.println("The arrow pointing right has the answer \"December\" above it and the arrow pointing left has the answer \"January\" above it.");
@@ -132,11 +132,11 @@ public class TundraRoom {
 					validInput = false;
 			 }
 			} while (! validInput);
-    }
+    	}
 
 	/**
   	@param player navigating the tundra room
-    @param scanner to take input
+    	@param scanner to take input
 	Description: Prompts for user input when exiting the tundra room
 	**/
 	public static void exitRoom(Player player, Scanner scanner) {
