@@ -7,47 +7,114 @@ public class FinalRoom {
 @param scanner to take input
 Description: Prompts for user input when entering the final room
 **/	
-public static void enterRoom(Player player, Scanner scanner) {
-        System.out.println(" a dragon emerges from the shadows...");
+	public static void enterRoom(Player player, Scanner scanner) {
+		System.out.println("A low rumble echoes through the cavern, and your footsteps falter as the sound grows louder.");
+		System.out.println("From the depths of the shadows, two piercing eyes suddenly ignite like embers in the dark.");
+		System.out.println("The ground trembles as a massive form emerges, scales glinting faintly as the dragon steps forward.");
+		System.out.println("Its wings unfurl slightly, brushing against the walls, and a guttural growl fills the air, shaking you to your core.");
+		System.out.println("This is it—the final challenge. The dragon rears its head, flames licking at the edges of its mouth, ready to strike.");
         boolean validInput;
         do {
-            	validInput = true;
-            	System.out.println("Would you like to continue to the boss fight (b)!??!? There is no backing out now!");
-            	String userInput = scanner.nextLine();
-        
+        	validInput = true;
+        	System.out.println("Would you like to continue to the boss fight (b)!??!? There is no backing out now!");
+        	String userInput = scanner.nextLine();
         	if (userInput.equalsIgnoreCase("b")) {
                 	roomActivity(player, scanner);
         	} else {
         		System.out.println("Your input was not recognized, please try again");
-                	validInput = false;
+                validInput = false;
         	}
-        
-	} while (!validInput);
-}
-	
-/**
-@param player navigating the final room
-@param scanner to take input
-Description: Room activity and puzzles are navigated
-**/
-private static void roomActivity(Player player, Scanner scanner) {
-	System.out.println("You are in the final boss fight, would you like to win? (y)");
-	if (scanner.nextLine().equalsIgnoreCase("y")) {
-	    	System.out.println("Congrats! You have beaten Project Biome!");
-	} else {
-		System.out.println(player.getPlayerName() + " awakes in the lobby room after being defeated by the dragon");
-	    	exitRoom(player, scanner);
+        } while (!validInput);
 	}
-}
+	
+	/**
+	@param player navigating the final room
+	@param scanner to take input
+	Description: Room activity and puzzles are navigated
+	**/
+	private static void roomActivity(Player player, Scanner scanner) {
+		boolean complete = false; // if room was completed
+		char choice;
+		do {
+			displayMenu();
+			choice = scanner.nextLine().charAt(0);
+		    switch (choice) {
+		    	case 'F':
+	                System.out.println("You draw your weapon and prepare to face the dragon!");
+	                System.out.println(" - Attack (press A)");
+	                System.out.println(" - Study the dragon's movements (press S)");
+	                System.out.println(" - Defend against the dragon's attack (press D)");
+	                System.out.print("Enter your choice: ");
+
+	                choice = scanner.next().toUpperCase().charAt(0);
+	                switch (choice) {
+		                case 'A':
+		                    System.out.println("You lunge forward, striking the dragon with all your might!");
+		                    System.out.println("The dragon lets out a deafening roar before collapsing. You win!");
+		                    complete = true;
+		                    break;
+	
+		                case 'S':
+		                    System.out.println("You focus intently on the dragon, noticing a weak spot in its scales.");
+		                    System.out.println("With newfound knowledge, you strike a precise blow and defeat the dragon. You win!");
+		                    complete = true;
+		                    break;
+	
+		                case 'D':
+		                    System.out.println("You brace yourself, trying to withstand the dragon's fiery breath.");
+		                    System.out.println("The flames overwhelm you, and you are defeated. You lose.");
+		                    complete = true;
+		                    break;
+	
+		                default:
+		                    System.out.println("You hesitate, and the dragon takes advantage of your inaction!");
+		                    System.out.println("The dragon attacks relentlessly, and you are defeated. You lose.");
+		                    complete = true;
+		                    break;
+	                }
+	                break;
+
+		    	case 'L':
+	                System.out.println("You attempt to flee the lair... ");
+	                System.out.println("You run under the dragon, barely escaping back into the lobby");
+	                complete = true;
+	                break;
+
+		    	case 'O':
+	                System.out.println("You open your inventory, searching for something to aid you.");
+	                player.getInventory();
+	                break;
+
+		    	default:
+	                System.out.println("Invalid choice. The dragon watches you hesitate, amused...");
+	                break;
+		    }
+		} while (!complete);	
+			exitRoom(player, scanner);
+	}
 
 
-/**
-@param player navigating the final room
-@param scanner to take input
-Description: Prompts for user input when exiting the final room
-**/
-private static void exitRoom(Player player, Scanner scanner) {
-        LobbyRoom.enterRoom(player, scanner);
-}
+	/**
+	@param player navigating the final room
+	@param scanner to take input
+	Description: Prompts for user input when exiting the final room
+	**/
+	private static void exitRoom(Player player, Scanner scanner) {
+		System.out.println("Player '" + player.getPlayerName() + "' is leaving the Final Room");
+		LobbyRoom.enterRoom(player, scanner);
+	}	
+	
+	private static void displayMenu() {
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("                ~*~ The Dragon's Lair ~*~                ");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("----------------------------------------------------------");
+		System.out.println("|  1. Face the dragon head-on... (press F)               |");
+		System.out.println("|  2. Attempt to flee the lair... (press L)              |");
+		System.out.println("|  3. Open your inventory for aid... (press O)           |");
+		System.out.println("----------------------------------------------------------");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.print("Choose your destiny: ");
+	}
 
 }
