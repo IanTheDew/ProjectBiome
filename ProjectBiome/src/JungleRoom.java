@@ -69,11 +69,6 @@ public class JungleRoom {
 		    System.out.println("Opening inventory...");
 		    player.getInventory();
 		    break;
-		case 'Q':
-			// quit the game (in reality just exits the room)
-		    System.out.println("Quitting the game...");
-		    complete = true;
-		    break;
 		default:
 		    System.out.println("Input not recognized, please try again.");
 	    }
@@ -136,7 +131,6 @@ public class JungleRoom {
         System.out.println("|  1. Fight the goblins... (press F)                     |");
         System.out.println("|  2. Flee... (press L)                                  |");
         System.out.println("|  3. Open Your Inventory... (press O)                   |");
-        System.out.println("|  4. Quit the game... (press Q)                         |");
         System.out.println("----------------------------------------------------------");
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.print("Choose an option: ");
