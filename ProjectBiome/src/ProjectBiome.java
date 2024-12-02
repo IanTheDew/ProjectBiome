@@ -20,14 +20,16 @@ public class ProjectBiome{
         System.out.println("║          Welcome to              ║");
         System.out.println("║         Project Biome!           ║");
         System.out.println("╚══════════════════════════════════╝\n");
-        System.out.println("Press any key to start (press 'm' at any time to open menu)");
+        System.out.println("Press any key to start");
         scanner.nextLine();
         System.out.println("Hello traveler, what is your name?: ");
             
         //get user name and make player object
         String name = scanner.nextLine();
         Player player = new Player(name);
-        
+	    
+	System.out.println(player.getPlayerName() + " begins their journey with nothing but the clothes on their back and a sword held in a sheath");
+		
         LobbyRoom.enterRoom(player, scanner);
         return gameTime;
     }
