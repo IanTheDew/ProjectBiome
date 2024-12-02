@@ -40,8 +40,8 @@ public class JungleRoom Rooms {
 		    System.out.println("You engage the goblins, they look at you menacingly");
 		    System.out.println("With your sword drawn, you feel a surge of confidence. The goblin leader sneers, but you stand your ground.");
 		    System.out.println("The other goblins hesitate, clearly intimidated by your weapon. Do you:");
-		    System.out.println("1. Charge at the goblins with a fierce battle cry! (press C)");
-		    System.out.println("2. Attempt to negotiate with the goblins, offering them treasure for safe passage. (press N)");
+		    System.out.println("1. Charge at the goblins with a fierce battle cry! (enter C)");
+		    System.out.println("2. Attempt to negotiate with the goblins, offering them treasure for safe passage. (enter N)");
 		    choice = scanner.nextLine().charAt(0);
 		    switch (choice) {
 			case 'C':
