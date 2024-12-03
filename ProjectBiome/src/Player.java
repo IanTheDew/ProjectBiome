@@ -1,20 +1,22 @@
-/*
- *This code is a class for the Player object
- *It allows us to  keep track of the players name, inventory, etc.
- *
- * @Author CSE 201 Group A
- */
+/**
+* Class: Player
+* @authors Ethan Ciota, Shalom Biswa, Ian Dewey, Shea Sullivan, Madeline Swisher, Lucas Williams-Heim
+* @version 2.0
+* Course : CSE 201 Fall 2024
+* Written: Dec 2, 2024
+*
+* Purpose: – Describe class purpose and what it does
+*/
 import java.util.ArrayList;
 
 public class Player {
-
-    private String playerName;
-    ArrayList<String> inventory;
-
+    private String playerName; // name assignend to the player
+    ArrayList<String> inventory; // Strings representing items held by the player
 
     public Player(String playerName) {
         this.playerName = playerName;
         inventory = new ArrayList<>();
+        inventory.add("Sword");
     }
 
     /**
